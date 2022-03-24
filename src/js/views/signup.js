@@ -11,7 +11,7 @@ export const SignUp = props => {
 		<div  className="container-sm form-group d-flex justify-content-center ">
 			{/* Formulario para registro de usuario  */}
 			<div className="row row row-cols-auto">
-			<form gap-3>
+			<div class="d-grid gap-3 bg-light border p-3">
 				<div className="form-group">
 					{/* <label for="exampleInputEmail1">Ingresa tu nombre</label> */}
 					<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu nombre"/>
@@ -44,13 +44,13 @@ export const SignUp = props => {
 					</label>
 				</div>
 				<button type="submit" className="btn btn-primary">Registrarme</button>
-				<div>
+				<div  class="p-3 bg-light border" >
 					<span>Ya tienes cuenta?
 						<button type="submit" className="btn btn-primary">Ir a login</button>
 					</span>
 				</div>				
 				
-			</form>
+			</div>
 		  </div>
 			
 		</div>
