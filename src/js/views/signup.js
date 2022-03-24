@@ -14,28 +14,49 @@ export const SignUp = props => {
 			<div class="d-grid gap-3 bg-light border p-3">
 				<div className="form-group">
 					{/* <label for="exampleInputEmail1">Ingresa tu nombre</label> */}
-					<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu nombre"/>
-					{/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
+					<input 
+					type="text" 
+					className="form-control" 
+					id="exampleInputEmail1" 
+					aria-describedby="emailHelp" 
+					placeholder="Ingresa tu nombre"/>
+					
 				</div>
 				<div className="form-group">
 					{/* <label for="exampleInputEmail1">Ingresa tu apellido</label> */}
-					<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu apellido" />
-					{/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
+					<input 
+					type="text" 
+					className="form-control" 
+					id="exampleInputEmail1" 
+					aria-describedby="emailHelp" 
+					placeholder="Ingresa tu apellido" />
 				</div>
 				<div className="form-group">
-					{/* <label for="exampleInputEmail1">Correo electronico</label> */}
-					<input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electronico"/>
-					{/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
+					<input 
+					type="email" 
+					className="form-control" 
+					id="exampleInputEmail1" 
+					aria-describedby="emailHelp" 
+					placeholder="Correo electronico"/>
+					
 				</div>
 				<div className="form-group">
 					{/* <label for="exampleInputEmail1">Contraseña</label> */}
-					<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contraseña"/>
-					{/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
+					<input 
+					type="text" 
+					className="form-control" 
+					id="exampleInputEmail1" 
+					aria-describedby="emailHelp" 
+					placeholder="Contraseña"/>
 				</div>
 				<div className="form-group">
 					{/* <label for="exampleInputEmail1">Confirmar contraseña</label> */}
-					<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirmar Contraseña"/>
-					{/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
+					<input 
+					type="text" 
+					className="form-control" 
+					id="exampleInputEmail1" 
+					aria-describedby="emailHelp" 
+					placeholder="Confirmar Contraseña"/>
 				</div>
 				<div className="form-check">
 					<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
@@ -43,18 +64,18 @@ export const SignUp = props => {
 					Recordarme
 					</label>
 				</div>
-				<button type="submit" className="btn btn-primary">Registrarme</button>
+				<button type="submit" className="btn btn-primary" onClick={() => actions.changeColor(index, "orange")}>Registrarme</button>
 				<div  class="p-3 bg-light border" >
 					<span>Ya tienes cuenta?
-						<button type="submit" className="btn btn-primary">Ir a login</button>
+						<button type="submit" className="btn btn-primary" onClick={() => actions.changeColor(index, "orange")}>Ir a login</button>
 					</span>
 				</div>				
 				
 			</div>
-		  </div>
+		</div>
 			
 		</div>
-	  </form>	
+	</form>	
 	);
 };
 
