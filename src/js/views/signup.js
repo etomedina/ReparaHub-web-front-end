@@ -206,7 +206,20 @@ export const SignUp = (props) => {
 					</Link>
 					</span>
 				</div>				
-				
+				<div>
+					<script><div>
+					 	if (navigator.geolocation){
+							navigator.geolocation.getCurrentPosition
+							(function(place){
+								data.innerHTML="latitude:  "+ place.
+								coords.latitude +"<br>longitude: "+ place.
+								coords.longitude;
+								})
+						}</div>
+				  </script>	
+					<h4>You are here</h4>
+					<div id="data">  </div>
+				</div>
 			</div>
 		</div>
 			
