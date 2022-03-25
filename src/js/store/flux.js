@@ -12,8 +12,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+
+			// inputUser: [
+			// 	{
+			// 		value: "",
+			// 	}
+			// ]
 		},
+
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
@@ -34,10 +41,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
-
-				//reset the global store
+			//reset the global store
 				setStore({ demo: demo });
-			}
+			},
+			
+			// validateInput: (inputValue) => {
+			// 	if(inputValue === "") alert("The input cannot be empty");
+			// 		return("Esta mal");
+			// return("Grabar registo en base de dato");
+
+			
+			// }
+
 		}
 	};
 };
