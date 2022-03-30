@@ -14,23 +14,25 @@ export const Login = (props) => {
 		
 	})
 
-    const CheckIn = async ()=>{
+    const checkIn = async ()=>{
 		const response = await fetch(
 			"http://127.0.0.1:3000/checkin_usuario/",{
-				method: "GET",
+				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify(userlogin),
 			}
 		);
+		
+		if (!response.ok) alert("Ha habido un problema en la solicitud de login");
 		const body = await response.json();
-		if (response.ok){
-            return response;
-		}
-		else return false;
+		localStorage.setItem("token", body.token);
+		history.push("/solicitud");
 	}	
     
+
+
     return(
         <form>
 		<div  className="container-sm form-group d-flex justify-content-center ">
@@ -101,20 +103,8 @@ export const Login = (props) => {
 				type="button" 
 				className="btn btn-primary"
 				onClick ={async(e)=>{
-					const userCheckout = await CheckIn(userlogin)
-					if (userCheckout ===1){
-						setUserlogin({
-							email: "",
-							password:"",
-							});}
-                        history.push('/signup')
-                        
-                    if (userCheckout ===2){
-                        alert("Usuario y/o password invalido");
-                    }
-					else
-                        alert("Usuario no registrado");
-					}}
+					const userCheckout = await checkIn(userlogin)
+				}}
 				>Ingresar</button>
 
 				<div  className="p-3 bg-light border" >
