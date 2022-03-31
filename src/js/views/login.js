@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
+
 export const Login = (props) => {
 	const { store, actions } = useContext(Context);
     const history = useHistory();
@@ -24,26 +25,32 @@ export const Login = (props) => {
 				body: JSON.stringify(userlogin),
 			}
 		);
-		
 		if (!response.ok) alert("Ha habido un problema en la solicitud de login");
-		const body = await response.json();
-		localStorage.setItem("token", body.token);
-		const token = localStorage.getItem("token");
+		const data = await response.json();
+		//this is to set a local const with token value to check if was returned from backend
+		const token = data.token;
+		//save token value on local storage
+		localStorage.setItem("token", data.token);
+		//this is to check  the id returned from backen
+		//console.log(`que es esto ${data.user_id}`)
+
 
 		const resp = await fetch(`http://127.0.0.1:3000/private`, {
 			method: 'GET',
 			headers: { 
 			  "Content-Type": "application/json",
 			  'Authorization': 'Bearer '+token // ⬅⬅⬅ authorization token
-			} 
+			  }, 
+			  
 		 })
-
 		 const datap = await resp.json();
-		 alert("This is the data you requested", datap);
-		 return datap
+		 //console.log=(`que es esto ${datap.email} `) 
+		console.log(`que es esto ${datap.name},${datap.familyname},${datap.email},${datap.id}`)
+		console.log(`after incrementing, counts value is ${token}.`);
+		 	//alert("This is the data you requested"+ "{(jwt_token)}");
 
-
-
+		console.log("This is the data you requested", datap);
+		return datap
 		//history.push("/solicitud");
 	}	
     
