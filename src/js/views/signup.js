@@ -28,7 +28,7 @@ export const SignUp = (props) => {
 	// const [userPswdVal, setUserPswdVal] = useState("")
 	const SaveUser = async ()=>{
 		const response = await fetch(
-			"http://172.22.150.112:3000/registro_usuario/",{
+			"http://127.0.0.1:3000/registro_usuario/",{
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

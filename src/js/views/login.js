@@ -16,7 +16,7 @@ export const Login = (props) => {
 
     const checkIn = async ()=>{
 		const response = await fetch(
-			"http://127.0.0.1:3000/checkin_usuario/",{
+			"http://127.0.0.1:3000/login",{
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -28,7 +28,23 @@ export const Login = (props) => {
 		if (!response.ok) alert("Ha habido un problema en la solicitud de login");
 		const body = await response.json();
 		localStorage.setItem("token", body.token);
-		history.push("/solicitud");
+		const token = localStorage.getItem("token");
+
+		const resp = await fetch(`http://127.0.0.1:3000/private`, {
+			method: 'GET',
+			headers: { 
+			  "Content-Type": "application/json",
+			  'Authorization': 'Bearer '+token // ⬅⬅⬅ authorization token
+			} 
+		 })
+
+		 const datap = await resp.json();
+		 alert("This is the data you requested", datap);
+		 return datap
+
+
+
+		//history.push("/solicitud");
 	}	
     
 
@@ -98,7 +114,7 @@ export const Login = (props) => {
 						Recordarme
 						</label>
 				</div>
-				{/* Boton para guardar usuario ingresado */}
+				{/* Boton para validar los datos del login */}
 				<button 
 				type="button" 
 				className="btn btn-primary"
