@@ -15,6 +15,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			getModels: async() => {
+				const response = await fetch(
+					'https://parseapi.back4app.com/classes/Carmodels_Car_Model_List_Toyota?limit=80', {
+						headers: {
+							'X-Parse-Application-Id': 'NQYSBMB8Y8nB2PusmrmtZmoZ6pTxwyLoG1QQ3ann', // This is your app's application id
+							'X-Parse-REST-API-Key': 't7Iu9h7kndNKtNzbhcTKCSsJVz30fPTKQfzkwV5g', // This is your app's REST API key
+						}
+					}
+				);
+				const body = await response.json();
+				if (!response.ok) return;
+				const models = [];
+				for (let model of body.results) {
+					models.push(model.Model);
+				}
+				setStore({
+					models: models
+				});
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
