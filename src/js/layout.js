@@ -22,7 +22,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className= 'container-sm p-6 d-flex flex-column'>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />

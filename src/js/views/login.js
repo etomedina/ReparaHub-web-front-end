@@ -25,7 +25,9 @@ export const Login = (props) => {
 				body: JSON.stringify(userlogin),
 			}
 		);
-		if (!response.ok) alert("Ha habido un problema en la solicitud de login");
+		if (!response.ok) 
+			return alert("Ha habido un problema en la solicitud de login");
+			
 		const data = await response.json();
 		//this is to set a local const with token value to check if was returned from backend
 		const token = data.token;
@@ -45,18 +47,17 @@ export const Login = (props) => {
 		 })
 		 const datap = await resp.json();
 		 //console.log=(`que es esto ${datap.email} `) 
-		console.log(`que es esto ${datap.name},${datap.familyname},${datap.email},${datap.id}`)
-		console.log(`after incrementing, counts value is ${token}.`);
+		// console.log(`que es esto ${datap.name},${datap.familyname},${datap.email},${datap.id}`)
+		// console.log(`after incrementing, counts value is ${token}.`);
 		 	//alert("This is the data you requested"+ "{(jwt_token)}");
 
-		console.log("This is the data you requested", datap);
-		return datap
-		//history.push("/solicitud");
+		// console.log("This is the data you requested", datap);
+		// return datap
+		return history.push("/solicitud");
 	}	
-    
-
-
-    return(
+	
+	
+	return(
         <form>
 		<div  className="container-sm form-group d-flex justify-content-center ">
 			{/* Formulario para registro de usuario  */}
