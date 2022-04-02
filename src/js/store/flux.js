@@ -12,7 +12,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+				
 			],
+			models : []
 
 			// inputUser: [
 			// 	{
@@ -33,12 +35,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				);
 				const body = await response.json();
 				if (!response.ok) return;
-				const models = [];
+				const models1 = [];
 				for (let model of body.results) {
-					models.push(model.Model);
+					models1.push(model.Model);
 				}
 				setStore({
-					models: models
+					models: models1
 				});
 			},
 			// Use getActions to call a function within a fuction

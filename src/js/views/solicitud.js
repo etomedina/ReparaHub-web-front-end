@@ -7,42 +7,43 @@ export const Solicitud = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-        <div>
-            <h2>QUE PROBLEMA TIENE TU  VEHICULO?</h2>
-            <div>
+        <div className='container mx-1'>
+            <h6>QUE PROBLEMA TIENE TU  VEHICULO?</h6>
+            <div className='d-flex flex-column  justify-content-around my-3'>
                 <div className='container-fluid'  >
-                    <select className="custom-select">
+                    <select className="custom-select my-2">
                         <option select='defaultValue'>Selecciona marca de tu vehiculo</option>
                         <option value="1">Toyota</option>
                         
                     </select>
-                    <select className="custom-select">
+                    <select className="custom-select my-2">
                         <option select='defaultValue'>Selecciona modelo de tu vehiculo</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        
+                        <option value="1">{store.models}</option>
+                        <option value="2">Fortuner</option>
+                        <option value="3">Yaris Belta</option>
                     </select>
-                    <select className="custom-select">
+                    <select className="custom-select my-2">
                         <option select='defaultValue'>Selecciona categoria de tu vehiculo</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">4x4</option>
+                        <option value="2">Sedan</option>
+                        <option value="3">Familiar</option>
                     </select>     
                 </div>
-                <div className=''>
-                    <div className=''> 
-                        <select className="custom-select">
+                <div className='d-flex my-3'>
+                    <div className='d-flex flex-column'> 
+                        <select className="custom-select my-2">
                             <option select='defaultValue'>Transmision</option>
                             <option value="1">Automatico</option>
                             <option value="2">Manual</option>
                         </select>
-                        <select className="custom-select">
+                        <select className="custom-select my-2">
                             <option select='defaultValue'>Año</option>
                             <option value="1">2022</option>
                             <option value="2">2021</option>
                         </select>      
                     </div>
-                    <div className=''>
+                    <div className='d-flex'>
                         <div className="form-check">
                             {/* Casilla Recordar */}
                             <input 
@@ -62,9 +63,11 @@ export const Solicitud = props => {
                 
                         <select className="custom-select">
                             <option select='defaultValue'>Que falla tiene tu vehiculo</option>
-                            <option value="1">Automatico</option>
+                            <option value="1">No funciona aire acondicionado</option>
                             <option value="2">Manual</option>
                         </select>
+
+                        <texterea>Ingrese aqui cualquier sugerencia</texterea>
                             
                     
                 
