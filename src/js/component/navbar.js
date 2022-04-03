@@ -8,7 +8,7 @@ export const Navbar = () => {
 				<span className="navbar-brand mb-0 h1">ReparaHub</span>
 			</Link>
 			<div className="ml-auto d-flex">
-				<Link to="/signup">
+				<Link to="/ayuda">
 					<button className="btn btn-link">Ayuda</button>
 				</Link>
 				
