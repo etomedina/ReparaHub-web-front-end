@@ -7,14 +7,16 @@ export const Navbar = () => {
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">ReparaHub</span>
 			</Link>
-			<div className="ml-auto d-flex justify-content-around">
+			<div className="ml-auto d-flex">
+				<Link to="/signup">
+					<button className="btn btn-link">Ayuda</button>
+				</Link>
+				
 				<Link to="/login">
-					<button className="btn btn-primary">Ingresar</button>
+					<button className="btn btn-light mx-2 rounded-pill border">Ingresar</button>
 				</Link>
 			
-				<Link to="/signup">
-					<button className="btn btn-primary">Sign Up</button>
-				</Link>
+				
 			</div>
 		</nav>
 	);
