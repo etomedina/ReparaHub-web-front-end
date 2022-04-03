@@ -6,14 +6,20 @@ import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
 export const Home = () => (
-		<div>
-			<div className=" p-2 text-center shadow-1-strong mb-5 text-black fondo border rounded">
-				<h6 className="mb-1 mt-1 display-6  fw-bold bg-light">ReparaHub es una nueva forma de solicitar servicio tecnico automotriz</h6>
-				<img src= {TallerImg01} className="img-fluid" alt="..."></img>
-				<p className="display-7 fw-bold bg-light">
+		<div className=" ">
+
+
+			<div className="container  p-2 text-center shadow-1-strong mb-5 bg-primary bg-opacity-25  text-muted  border rounded  ">
+			{/* <div className=" p-2 text-center shadow-1-strong mb-5 bg-primary bg-opacity-25 text-muted  border rounded"></div> "mb-1 mt-1 display-6  fw-bold bg-light" display-7 fw-bold bg-light	 */}
+				<h6 className=" mb-1 mt-1 display-6  fw-bold ">ReparaHub es una nueva forma de solicitar servicio tecnico automotriz</h6>
+				<div className="transpa-bg"><img src= {TallerImg01} className="container img-fluid" alt="..."></img> </div>
+				<p className=" display-7 fw-bold ">
 					Te solucionamos el problema de tu vehiculo con un par de clics
 				</p>
 			</div>
+
+
+
 			<div className="container border-top border-1 border-bottom py-5"  >
 				<div className="d-flex flex-row">
 					<div className="col-md-8 ">
@@ -43,7 +49,7 @@ export const Home = () => (
 						</div>    
 				</div> 
 			</div>
-			<div className="d-flex flex-row border rounded bg-info text-light flex-fill">
+			<div className="d-flex flex-row border rounded bg-primary bg-opacity-25 text-muted justify-content-around">
 				<div className="d-flex flex-column my-1">
 					<p>No esperes mas,</p>
 					<p>Registrate con unos simples pasos</p>

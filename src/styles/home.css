@@ -1,9 +1,40 @@
 .fondo{
-    background-image: url("/src/img/taller.jpg") ;
+            /* background-image: url("/src/img/taller.jpg") ; */
             /* Full height */
             height: 100%;
             /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            display: block;
+            background-color:#0a58caba; 
 }
+
+.background-image {
+    background-image: url("/src/img/taller.jpg") ;
+    background-size: cover;
+    display: block;
+    filter: blur(10px) contrast(30%);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 1;}
+
+    .sample-div {
+        position: absolute;
+      }
+      .transpa-bg{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        opacity: 0.5;
+       
+      }
+      .content {
+        position: relative;
+        z-index: 10;
+      }
