@@ -14,7 +14,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				
 			],
-			models : []
+			models : [],
+			categorys : []
 
 			// inputUser: [
 			// 	{
@@ -41,6 +42,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				setStore({
 					models: models1
+				});
+			},
+			//get category clone of get model
+			getCategorys: async() => {
+				const response = await fetch(
+					'https://parseapi.back4app.com/classes/Carmodels_Car_Model_List_Toyota?limit=80', {
+						headers: {
+							'X-Parse-Application-Id': 'NQYSBMB8Y8nB2PusmrmtZmoZ6pTxwyLoG1QQ3ann', // This is your app's application id
+							'X-Parse-REST-API-Key': 't7Iu9h7kndNKtNzbhcTKCSsJVz30fPTKQfzkwV5g', // This is your app's REST API key
+						}
+					}
+				);
+				const body = await response.json();
+				if (!response.ok) return;
+				const categorys1 = [];
+				for (let category of body.results) {
+					categorys1.push(category.Category);
+				}
+				setStore({
+					categorys: categorys1
 				});
 			},
 			// Use getActions to call a function within a fuction

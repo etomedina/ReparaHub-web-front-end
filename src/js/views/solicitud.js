@@ -16,12 +16,24 @@ export const Solicitud = props => {
                         <option value="1">Toyota</option>
                         
                     </select>
+                    <select value={store.models.selectItem} >
+                    <option >Selecione el Modelo</option>    
+                    {store.models.map((model, index) => (
+                        <option key={index} value={model}>{model}</option>
+                        ))}
+                    </select>
                     <select className="custom-select my-2">
                         <option select='defaultValue'>Selecciona modelo de tu vehiculo</option>
-                        
                         <option value="1">{store.models}</option>
                         <option value="2">Fortuner</option>
                         <option value="3">Yaris Belta</option>
+                    </select>
+                    
+                    <select value={(store.categorys).selectItem} >
+                    <option >Selecione la Categoria</option>
+                    {(store.categorys).map((category, index) => (
+                        <option key={index} value={category}>{category}</option>
+                        ))}
                     </select>
                     <select className="custom-select my-2">
                         <option select='defaultValue'>Selecciona categoria de tu vehiculo</option>
@@ -60,22 +72,18 @@ export const Solicitud = props => {
             </div>
             <div>
                 <div className='container-fluid'>
-                
-                        <select className="custom-select">
+                           <select className="custom-select">
                             <option select='defaultValue'>Que falla tiene tu vehiculo</option>
                             <option value="1">No funciona aire acondicionado</option>
                             <option value="2">Manual</option>
                         </select>
-
                         <texterea>Ingrese aqui cualquier sugerencia</texterea>
-                            
-                    
-                
                 </div>
             </div>
         </div>
-        );
-};
+        )};
+
+
 
 Solicitud.propTypes = {
 	match: PropTypes.object
