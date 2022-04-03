@@ -9,7 +9,7 @@ export const Home = () => (
 		<div className=" ">
 
 
-			<div className="container  p-2 text-center shadow-1-strong mb-5 bg-primary bg-opacity-25  text-muted  border rounded  ">
+			<div className="container  p-2 text-center shadow-1-strong mb-5   text-white  border rounded  ">
 			{/* <div className=" p-2 text-center shadow-1-strong mb-5 bg-primary bg-opacity-25 text-muted  border rounded"></div> "mb-1 mt-1 display-6  fw-bold bg-light" display-7 fw-bold bg-light	 */}
 				<h6 className=" mb-1 mt-1 display-6  fw-bold ">ReparaHub es una nueva forma de solicitar servicio tecnico automotriz</h6>
 				<div className="transpa-bg"><img src= {TallerImg01} className="container img-fluid" alt="..."></img> </div>
