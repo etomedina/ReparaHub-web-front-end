@@ -1,66 +1,45 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import TallerImg01 from "../../img/taller.jpg"
-import TallerImg02 from "../../img/repara_01.jpg"
+import repara_01 from "../../img/repara_01.jpg"
+import repara_02 from "../../img/repara_02.jpg"
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
-export const Home = () => (
-		<div className=" ">
-
-
-			<div className="container  p-2 text-center shadow-1-strong mb-5   text-white  border rounded  ">
-			{/* <div className=" p-2 text-center shadow-1-strong mb-5 bg-primary bg-opacity-25 text-muted  border rounded"></div> "mb-1 mt-1 display-6  fw-bold bg-light" display-7 fw-bold bg-light	 */}
-				<h6 className=" mb-1 mt-1 display-6  fw-bold ">ReparaHub es una nueva forma de solicitar servicio tecnico automotriz</h6>
-				<div className="transpa-bg"><img src= {TallerImg01} className="container img-fluid" alt="..."></img> </div>
-				<p className=" display-7 fw-bold ">
-					Te solucionamos el problema de tu vehiculo con un par de clics
-				</p>
-			</div>
-
-
-
-			<div className="container border-top border-1 border-bottom py-5"  >
-				<div className="d-flex flex-row">
-					<div className="col-md-8 ">
-						<h1 >Que es <span className="text-muted">ReparaHub?</span> </h1>
-						<p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia architecto dolores reprehenderit temporibus corporis velit porro enim error voluptatum asperiores et eius, cum aperiam laborum fugiat, dignissimos sapiente.</p>
-					</div>
-					<div className="col-md-4"> 
-						<img src= {rigoImage} alt=""  className="rounded-circle img-fluid rounded-sm" />
-					</div>
+export const Home = () => {
+	return (
+	<div className="container mt-3 d-flex flex-column flex-nowrap align-items-center">
+		<div class="jumbotron jumbotron-fluid d-flex flex-column flex-nowrap justify-content-around p-2">
+				<div className="d-flex flex-row flex-nowrap">
+					<div className="col-6"></div>
+					<h1 class="col-6 display-jt px-4 py-2 my-2 justify-content-end">Repara Hub es una nueva forma de solicitar servicio técnico automotriz</h1>
+				</div>
+				<p class="display-jt px-4 py-1 m-0 d-flex justify-content-end">Le solucionamos la falla de tu vehículo en un par de clics</p>
+		</div>
+		<div className="menu-about mt-3 p-1 d-flex flex-column flex-nowrap align-items-center">
+			<p className='about-title m-0'> Conoce Repara Hub</p>
+			<div className='about d-flex flex-row flex-nowrap mt-2 p-0 justify-content-center'>
+				<img src={repara_01} className="rounded-circle align-self-center p-1" ></img>
+				<div className='about-block d-flex flex-column flex-nowrap justify-content-around mx-3'>
+					<p className='m-0' >Que es Repara Hub</p>
+					<span> Es un servicio que le ofrece asistencia ante una falla en el lugar donde ud se encuentre</span>
 				</div>
 			</div>
-			<div className="container py-5 flex-row d-flex">
-				<div className="d-flex flex-row">
-						<div className="d-flex">
-							<div className="container">
-								<img src={TallerImg02} className="rounded-circle rounded-sm img-fluid" alt=""/>
-							</div>
-							
-						</div>
-						<div className="flex-colum">
-							<div  className="col-12">
-								<h1 > <b>Por que</b> <span className="text-muted"> me conviene?</span> </h1>
-								<p>Donec ullamcoper nulla non metus autor fringilla.Vestibulum id igula porta felis euismod semper. 
-									Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, rsus commodo.
-								</p>
-							</div>
-						</div>    
-				</div> 
-			</div>
-			<div className="d-flex flex-row border rounded bg-primary bg-opacity-25 text-muted justify-content-around">
-				<div className="d-flex flex-column my-1">
-					<p>No esperes mas,</p>
-					<p>Registrate con unos simples pasos</p>
-				</div>
-				<div className="d-flex my-3 mx-1">
-					<Link to="/signup">
-						<button className="btn btn-primary">Registrarse</button>
-					</Link>
+			<div className='about d-flex flex-row-reverse flex-nowrap mt-2 p-0 justify-content-center'>
+				<img src={repara_02} className="rounded-circle align-self-center p-1" ></img>
+				<div className='about-block d-flex flex-column flex-nowrap  mx-3'>
+					<p className='m-0' >Que es Repara Hub</p>
+					<span> Es un servicio que le ofrece asistencia ante una falla en el lugar donde ud se encuentre</span>
 				</div>
 			</div>
+		</div>
 
-		</div>	
-		
-);
+		<div className="llamado-registro my-3 px-3 py-1 d-flex flex-row flex-nowrap justify-content-between align-items-center">
+			<div className="d-flex flex-column flex-nowrap p-0 m-0"><p className="call-to-action p-0 m-0">¡No espere más!</p><p className='action-down p-0 m-0'>Regístrese con unos simples pasos</p></div>
+			<Link to="/signup">
+				<button className="btn rounded-pill btn-register">Registro</button>
+			</Link>
+		</div>
+	</div>
+	);
+	};
+
+

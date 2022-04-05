@@ -14,6 +14,7 @@ import { Ayuda } from "./views/ayuda";
 import { Privacidad } from "./views/privacidad";
 import { Proveedores } from "./views/proveedores";
 import { Terminos } from "./views/terminos";
+import "../../src/styles/home.css";
 
 //create your first component
 const Layout = () => {
@@ -21,8 +22,8 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
 
-	return (
-		<div className= 'container-sm p-6 d-flex flex-column bg-primary bg-opacity-50'>
+	return (  //p-6 d-flex flex-column bg-primary bg-opacity-50
+		<div className= 'container-fluid p-0 m-0 col-12'>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />

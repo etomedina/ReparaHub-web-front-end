@@ -1,19 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import repara_hub_150px from "../../img/repara_hub_150px.png";
+import "../../styles/home.css";
+
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light  mb-3">
+		<nav className="navbar navbar-custom-bg py-2 px-4 d-flex flex-row flex-nowrap">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">ReparaHub</span>
+				<div className='brand-image justify-content-start'>
+					<img src= {repara_hub_150px} alt="ReparaHub"></img>
+				</div>
 			</Link>
-			<div className="ml-auto d-flex">
+			<div className="ml-auto d-flex justify-content-end">
 				<Link to="/ayuda">
-					<button className="btn btn-link">Ayuda</button>
+					<button className="btn font-weight-bolder text-white">Ayuda</button>
 				</Link>
 				
 				<Link to="/login">
-					<button className="btn btn-light mx-2 rounded-pill border">Ingresar</button>
+					<button className="btn mx-2 rounded-pill btn-custom">Ingresar</button>
 				</Link>
 			
 				

@@ -1,26 +1,8 @@
-.fondo{
-            /* background-image: url("/src/img/taller.jpg") ; */
-            /* Full height */
-            height: 100%;
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: block;
-            background-color:#0a58caba; 
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.background-image {
-    background-image: url("/src/img/taller.jpg") ;
-    background-size: cover;
-    display: block;
-    filter: blur(10px) contrast(30%);
-    height: 100%;
-    width: 100%;
-    left: 0;
-    position: fixed;
-    right: 0;
-    z-index: 1;}
 
     .sample-div {
         position: absolute;
@@ -38,3 +20,109 @@
         position: relative;
         z-index: 10;
       }
+
+      .brand-image {
+        width: 150px;
+      }
+
+      .brand-image > img {
+        max-width: 150px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .navbar-custom-bg, .footer-custom-bg {
+        background-color: #0f0c04;
+      }
+      .btn-custom {
+        background-color: #ffcd05;
+        color: #0f0c04;
+        font-weight: bold;
+      }
+
+      .footer-brand > img {
+        max-width: 100px;
+        height: auto;
+        object-fit: contain;
+        
+      }
+
+      .separador {
+        size: 3px;
+        color: white;
+      }
+
+      .jumbotron {
+        width: 90vw;
+        height: 40vh;
+      }
+.jumbotron {
+  background-image: url("http://localhost:5000/taller_01.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+}
+.display-jt{
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  text-align: end;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.container-fluid {
+    background-color: #f1f1f1; 
+}
+
+.menu-about img {
+  width: 7rem;
+  height:7rem;
+
+}
+.about-block{
+  width: 50%;
+}
+
+span {
+  font-size: 0.8rem ;
+}
+
+.about-title{
+  height: 5vh;
+}
+.about{
+  height: 16vh;
+}
+
+.menu-about {
+  width: 90vw;
+  height: 50vh;
+  background-color: #ffcc00; 
+  border-radius: 2rem;
+}
+
+
+.llamado-registro {
+  width: 90vw;
+  height: 10vh;
+  background-color: #0f0c04; 
+  border-radius: 1.5rem;
+}
+
+.call-to-action{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.action-down{
+  font-size: 0.8rem;
+  color: #ffcd05;
+}
+
+.btn-register {
+  background-color: #ffcd05;
+  color: #0f0c04;
+  font-weight: bold;
+}
