@@ -15,7 +15,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 				
 			],
 			models : [],
-			categorys : []
+			categorys : [],
+
+			proveedores: [
+				{
+					name: "Toyota Fix 2000",
+					presupuesto: "Revision y chequeo del vehiculo a nivel mecanico y electrico con diagnostico del problema en menos de 24 horas a partir del momento del reporte",
+					fecha: "Abril-2022",
+				},
+				{
+					name: "Auto Repair Technology",
+					presupuesto: "Revision de falla reportada a nivel mecanico con personal especializado en vehiculos marca toyota. Trabajo garantizado.",
+					fecha: "Abril-2022",
+				},
+				{
+					name: "Chasis Service",
+					presupuesto: "Evaluacion de vehiculo a nivel general, con diagnostico preciso en los distintos niveles. Garantia por 1 semana.",
+					fecha: "Abril-2022",
+				},
+				{
+					name: "PDR Service",
+					presupuesto: "Revision del vehiculo en sitio, con envio de personal calificado al lugar del incidente para el diagnostico y reparacion del mismo.",
+					fecha: "Abril-2022",
+				},
+			]
+
+
 
 			// inputUser: [
 			// 	{
