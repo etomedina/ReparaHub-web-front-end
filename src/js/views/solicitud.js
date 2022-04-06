@@ -3,88 +3,153 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Solicitud = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
-	return (
-        <div className='container mx-1'>
-            <h6>QUE PROBLEMA TIENE TU  VEHICULO?</h6>
-            <div className='d-flex flex-column  justify-content-around my-3'>
-                <div className='container-fluid'  >
-                    <select className="custom-select my-2">
-                        <option select='defaultValue'>Selecciona marca de tu vehiculo</option>
-                        <option value="1">Toyota</option>
-                        
-                    </select>
-                    <select value={store.models.selectItem} >
-                    <option >Selecione el Modelo</option>    
-                    {store.models.map((model, index) => (
-                        <option key={index} value={model}>{model}</option>
-                        ))}
-                    </select>
-                    <select className="custom-select my-2">
-                        <option select='defaultValue'>Selecciona modelo de tu vehiculo</option>
-                        <option value="1">{store.models}</option>
-                        <option value="2">Fortuner</option>
-                        <option value="3">Yaris Belta</option>
-                    </select>
-                    
-                    <select value={(store.categorys).selectItem} >
-                    <option >Selecione la Categoria</option>
-                    {(store.categorys).map((category, index) => (
-                        <option key={index} value={category}>{category}</option>
-                        ))}
-                    </select>
-                    <select className="custom-select my-2">
-                        <option select='defaultValue'>Selecciona categoria de tu vehiculo</option>
-                        <option value="1">4x4</option>
-                        <option value="2">Sedan</option>
-                        <option value="3">Familiar</option>
-                    </select>     
+import "../../styles/solicitud.css";
+
+export const Solicitud = (props) => {
+  const { store, actions } = useContext(Context);
+  const params = useParams();
+  return (
+    <form className="d-flex bloque1">
+      <div className="row align1">
+        <div className="my-0 mx-0">
+          {" "}
+          <span>Bienvenido: User_name</span>
+        </div>
+        <div className="center">
+          <div className="my-2">
+            <hr />
+          </div>
+          <h6 className="my-2">
+            <b>QUE PROBLEMA TIENE TU VEHICULO?</b>
+          </h6>
+        </div>
+        <div className="center1">
+          <div className="align1">
+            <div className="col d-grid gap-3 my-2">
+              <div className="make">
+                <select>
+                  <option select="defaultValue">
+                    Selecciona marca de tu vehiculo
+                  </option>
+                  <option value="1">Toyota</option>
+                </select>
+              </div>
+              <div className="model">
+                <select>
+                  <option>Selecciona modelo de tu vehiculo</option>
+                  {store.models.map((model, index) => (
+                    <option key={index} value={model}>
+                      {model}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="category">
+                <select>
+                  <option>Selecciona categoria de tu vehiculo</option>
+                  {store.categorys.map((category, index) => (
+                    <option key={index} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+          <div className="d-grid gap-2 my-7 mx-15 align1 ">
+            <div className="row row-cols-2 gap-3 align3  ">
+              <div className="row d-grid gap-3 gx-5">
+                <div>
+                  <select>
+                    <option select="defaultValue">Transmision</option>
+                    <option value="1">Automatico</option>
+                    <option value="2">Manual</option>
+                  </select>
                 </div>
-                <div className='d-flex my-3'>
-                    <div className='d-flex flex-column'> 
-                        <select className="custom-select my-2">
-                            <option select='defaultValue'>Transmision</option>
-                            <option value="1">Automatico</option>
-                            <option value="2">Manual</option>
-                        </select>
-                        <select className="custom-select my-2">
-                            <option select='defaultValue'>Año</option>
-                            <option value="1">2022</option>
-                            <option value="2">2021</option>
-                        </select>      
-                    </div>
-                    <div className='d-flex'>
-                        <div className="form-check">
-                            {/* Casilla Recordar */}
-                            <input 
-                            className="form-check-input" 
-                            type="checkbox" 
-                            value="" 
-                            id="defaultCheck1"/>
-                                <label className="form-check-label" htmlFor="defaultCheck1">
-                                Guardar mi seleccion predeterminada
-                                </label>
-                        </div>
-                    </div>
+                <div>
+                  <select>
+                    <option select="defaultValue">Año</option>
+                    <option value="1">2022</option>
+                    <option value="2">2021</option>
+                  </select>
+                </div>
+              </div>
+              <div className="row d-grid gap-2">
+                <div>
+                  <div className="col">
+                    <form>
+                      <label>
+                        <input
+                          type="text"
+                          name="name"
+                          defaultValue="Número de Teléfono"
+                        />
+                      </label>
+                    </form>
+                  </div>
+                  <div>
+                    {/* Casilla Recordar */}
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label className="form-check-label" htmlFor="defaultCheck1">
+                      Guardar mi seleccion predeterminada
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div className="my-2">
+            <hr />
+        </div>
+        <div>
+            <div>
+                <select className="custom-select">
+                    <option select="defaultValue">Que falla tiene tu vehiculo</option>
+                    <option value="1">No funciona aire acondicionado</option>
+                    <option value="2">Manual</option>
+                </select>
+            </div>
+            <div>    
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
                 </div>
             </div>
             <div>
-                <div className='container-fluid'>
-                           <select className="custom-select">
-                            <option select='defaultValue'>Que falla tiene tu vehiculo</option>
-                            <option value="1">No funciona aire acondicionado</option>
-                            <option value="2">Manual</option>
-                        </select>
-                        <texterea>Ingrese aqui cualquier sugerencia</texterea>
+                <script><div>
+                            if (navigator.geolocation){
+                                navigator.geolocation.getCurrentPosition
+                                (function(place){
+                                    //data.innerHTML=coords.latitude+" - " + place+coords.longitude + place; 
+                                    data.innerHTML="  "+ place.
+								    coords.latitude +" "+ place.
+								    coords.longitude;
+                                   })
+                            }
+                            
+                            </div>
+                            
+                    </script>
+                    <p className="h6" >Ubicación actual/Seleccionada: </p>
+					<div  id="data">  </div>	
                 </div>
-            </div>
         </div>
-        )};
-
-
+        <div>
+            <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
+        </div>
+        
+      </div>
+    </form>
+  );    
+};
 
 Solicitud.propTypes = {
-	match: PropTypes.object
+  match: PropTypes.object,
 };

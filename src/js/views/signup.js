@@ -211,8 +211,8 @@ export const SignUp = (props) => {
 					 	if (navigator.geolocation){
 							navigator.geolocation.getCurrentPosition
 							(function(place){
-								data.innerHTML="latitude:  "+ place.
-								coords.latitude +"<br>longitude: "+ place.
+								data.innerHTML="latitud:  "+ place.
+								coords.latitude +"<br>longitud: "+ place.
 								coords.longitude;
 								})
 						}</div>

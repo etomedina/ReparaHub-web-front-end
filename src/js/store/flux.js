@@ -40,8 +40,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				for (let model of body.results) {
 					models1.push(model.Model);
 				}
+				// setStore({
+					// models: models1
+				// });
+
+				let uniqueModel = models1.filter((element, index) => {
+					return models1.indexOf(element) === index;
+				});
 				setStore({
-					models: models1
+					models: uniqueModel
 				});
 			},
 			//get category clone of get model
@@ -60,8 +67,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				for (let category of body.results) {
 					categorys1.push(category.Category);
 				}
+				
+				
+				let uniqueCategory = categorys1.filter((element, index) => {
+					return categorys1.indexOf(element) === index;
+				});
+
 				setStore({
-					categorys: categorys1
+					categorys: uniqueCategory
 				});
 			},
 			// Use getActions to call a function within a fuction
