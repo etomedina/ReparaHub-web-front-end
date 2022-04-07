@@ -20,7 +20,7 @@ export const Solicitud = (props) => {
         <div className="my-0 mx-0">
           {" "}
             <span>
-                <div >Usuario: <b>Bubulala</b>{/* <b>{datauser2.name}</b> */}</div>
+                <div >Usuario: <b>{datauser2.name}</b></div>
             </span>
         </div>
 

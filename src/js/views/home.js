@@ -32,7 +32,7 @@ export const Home = () => {
 					<span>Tendrá la tranquilidad de recibir ayuda de un técnico calificado donde usted se encuentre*</span>
 				</div>
 			</div>
-			<p className="service-exception align-self-end m-1 px-3	">*Splo disponible en el área metropolitna de Caracas</p>
+			<p className="service-exception align-self-end m-1 px-3	">*Solo disponible en el área metropolitna de Caracas</p>
 		</div>
 
 		<div className="llamado-registro my-3 px-3 py-1 d-flex flex-row flex-nowrap justify-content-between align-items-center">
