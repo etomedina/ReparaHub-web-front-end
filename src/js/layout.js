@@ -8,6 +8,7 @@ import { SignUp } from "./views/signup";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Footersmall } from "./component/footerSmall";
 import { Login } from "./views/login";
 import { Solicitud } from "./views/solicitud";
 import { Ayuda } from "./views/ayuda";
@@ -17,6 +18,7 @@ import { Terminos } from "./views/terminos";
 import { Propuesta } from "./views/propuestas";
 import { Servicio } from "./views/service";
 import "../../src/styles/home.css";
+import { NavbarPrivate } from "./component/navbarprivate";
 
 //create your first component
 const Layout = () => {
@@ -28,46 +30,64 @@ const Layout = () => {
 		<div className= 'container-fluid p-0 m-0 col-12'>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
 						<Route exact path="/">
+							<Navbar />
 							<Home />
+							<Footer />
 						</Route>
 						<Route exact path="/ayuda">
+							<Navbar />
 							<Ayuda />
+							<Footer />
 						</Route>
 						<Route exact path="/privacidad">
+							<Navbar />
 							<Privacidad />
+							<Footer />
 						</Route>
 						<Route exact path="/proveedores">
+							<Navbar />
 							<Proveedores />
+							<Footer />
 						</Route>
 						<Route exact path="/terminos">
+							<Navbar />
 							<Terminos />
+							<Footer />
 						</Route>
 						<Route exact path="/login">
 							<Login />
+							<Footersmall />
 						</Route>
 						<Route exact path="/single/:theid">
+							<NavbarPrivate />
 							<Single />
+							<Footersmall />
 						</Route>
 						<Route exact path="/signup">
 							<SignUp />
+							<Footersmall />
 						</Route>
 						<Route exact path="/solicitud">
+							<NavbarPrivate />
 							<Solicitud />
+							<Footersmall />
 						</Route>
 						<Route exact path="/propuestas">
+							<NavbarPrivate />
 							<Propuesta />
+							<Footersmall />
 						</Route>
 						<Route exact path="/service">
+							<NavbarPrivate />	
 							<Servicio />
+							<Footersmall />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

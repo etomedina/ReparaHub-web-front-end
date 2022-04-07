@@ -2,6 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/home.css";
+import repara_hub from "../../img/repara_hub.png"
+
 
 export const Login = (props) => {
 	const { store, actions } = useContext(Context);
@@ -65,97 +68,105 @@ export const Login = (props) => {
 	
 	
 	return(
-        <form>
-		<div  className="container-sm form-group d-flex justify-content-center ">
-			{/* Formulario para registro de usuario  */}
-			<div className="row row row-cols-auto">
-			<div className="d-grid gap-3 bg-light border p-3">
-							
-				<div className="form-group">
-					{/* Email */}
-					<input 
-					type="email" 
-					className="form-control" 
-					id="form-03" 
-					placeholder="Correo electronico"
-					value = {userlogin.email}
-					// onKeyPress = {(e) =>{
-					// 	if (e.key.search(/[a-z]/) ===-1){
-					// 		e.preventDefault();
-					// 		e.stopPropagation();
-					// 		return;
-					// 	}
-					// }}
-					onChange={(e) => {
-						setUserlogin({
-							...userlogin,
-							email: e.target.value,
-						});
-					}}/>
+		<div className="container-fluid login-screen p-0 m-0 d-flex flex-column flex-nowrap align-items-center justify-content-center">
+				<div className='brand-login d-flex align-items-center'>
+				<Link to="/">
+				<img src={repara_hub}></img>
+				</Link>
+			</div>
+			<p className='about-title text-white p-0 m-0'>Inicio de sesión</p>
+			<hr className='separador'></hr>
+			<form>
+			<div className="container-sm form-group d-flex justify-content-center m-0">
+				{/* Formulario para registro de usuario  */}
+				<div className="row row row-cols-auto">
+				<div className="d-grid login-form gap-3 p-3 my-4">
+								
+					<div className="form-group">
+						{/* Email */}
+						<input 
+						type="email" 
+						className="form-control rounded-pill"
+						id="form-03" 
+						placeholder="Correo electronico"
+						value = {userlogin.email}
+						// onKeyPress = {(e) =>{
+						// 	if (e.key.search(/[a-z]/) ===-1){
+						// 		e.preventDefault();
+						// 		e.stopPropagation();
+						// 		return;
+						// 	}
+						// }}
+						onChange={(e) => {
+							setUserlogin({
+								...userlogin,
+								email: e.target.value,
+							});
+						}}/>
+						
+					</div>
+					<div className="form-group">
+						{/* Password */}
+						<input 
+						type="password" 
+						className="form-control rounded-pill"
+						id="form-04" 
+						placeholder="Contraseña"
+						value = {userlogin.password}
+						onKeyPress = {(e) =>{
+							if (e.key.search(/[a-z]/) ===-1){
+								e.preventDefault();
+								e.stopPropagation();
+								return;
+							}
+						}}
+						onChange={(e) => {
+							setUserlogin({
+								...userlogin,
+								password: e.target.value,
+							});
+						}}
+						/>
+					</div>
+					
+					<div className="form-check">
+						{/* Casilla Recordar */}
+						<input 
+						className="form-check-input" 
+						type="checkbox" 
+						value="" 
+						id="defaultCheck1"/>
+							<label className="form-check-label text-dark" htmlFor="defaultCheck1">
+							Recordarme
+							</label>
+					</div>
+					{/* Boton para validar los datos del login */}
+					<button 
+					type="button" 
+					className="btn btn-success rounded-pill"
+					onClick ={async(e)=>{
+						const userCheckout = await checkIn(userlogin)
+					}}
+					>Ingresar</button>
+
+					<hr className='separador'></hr>
+					<div className="p-3 inner-action d-flex flex-row flex-nowrap justify-content-around align-items-center" >
+						<span className='text-white call-to-action'>¿No tiene una cuenta?
+							{/* Boton para enviar al usuario a la vista Sign Up */}
+						</span>
+						<Link to="/signup">
+							<span className="btn rounded-pill btn-register" href="#" role="button">
+							Registrarse
+							</span>
+						</Link>
+					</div>					
 					
 				</div>
-				<div className="form-group">
-					{/* Password */}
-					<input 
-					type="password" 
-					className="form-control" 
-					id="form-04" 
-					placeholder="Contraseña"
-					value = {userlogin.password}
-					onKeyPress = {(e) =>{
-						if (e.key.search(/[a-z]/) ===-1){
-							e.preventDefault();
-							e.stopPropagation();
-							return;
-						}
-					}}
-					onChange={(e) => {
-						setUserlogin({
-							...userlogin,
-							password: e.target.value,
-						});
-					}}
-					/>
-				</div>
-				
-				<div className="form-check">
-					{/* Casilla Recordar */}
-					<input 
-					className="form-check-input" 
-					type="checkbox" 
-					value="" 
-					id="defaultCheck1"/>
-						<label className="form-check-label" htmlFor="defaultCheck1">
-						Recordarme
-						</label>
-				</div>
-				{/* Boton para validar los datos del login */}
-				<button 
-				type="button" 
-				className="btn btn-primary"
-				onClick ={async(e)=>{
-					const userCheckout = await checkIn(userlogin)
-				}}
-				>Ingresar</button>
-
-				<div  className="p-3 bg-light border" >
-					<span>No tienes cuenta?
-						{/* Boton para enviar al usuario a la vista Sign Up */}
-						
-					<Link to="/signup">
-						<span className="btn btn-primary btn-sm" href="#" role="button">
-						Registrarse
-						</span>
-					</Link>
-					</span>
-				</div>				
+			</div>
 				
 			</div>
+		</form>	
 		</div>
-			
-		</div>
-	</form>	
-
         
     )
 };

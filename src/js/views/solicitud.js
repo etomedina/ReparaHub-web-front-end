@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-import "../../styles/solicitud.css";
+// import "../../styles/solicitud.css";
+// import "../../styles/home.css";
 
 export const Solicitud = (props) => {
   const { store, actions } = useContext(Context);
@@ -18,9 +19,9 @@ export const Solicitud = (props) => {
       <div className="row align1">
         <div className="my-0 mx-0">
           {" "}
-          <span>
-              <div >usario: <b>{datauser2.name}</b></div>;
-          </span>
+            <span>
+                <div >Usuario: <b>Bubulala</b>{/* <b>{datauser2.name}</b> */}</div>
+            </span>
         </div>
 
         <div className="center">
@@ -139,7 +140,7 @@ export const Solicitud = (props) => {
                                     data.innerHTML="  "+ place.
 								    coords.latitude +" "+ place.
 								    coords.longitude;
-                                   })
+                                  })
                             }
                             
                             </div>
