@@ -20,7 +20,7 @@ export const Solicitud = (props) => {
         <div className="my-0 mx-0">
           {" "}
             <span>
-                <div >Usuario: <b>{datauser2.name}</b></div>
+                <div >Usuario: <b>{datauser2.name} {datauser2.familyname} </b></div>
             </span>
         </div>
 
@@ -150,7 +150,7 @@ export const Solicitud = (props) => {
 					<div  id="data">  </div>	
                 </div>
         </div>
-        <div>
+        <div className="d-flex justify-content-center my-1">
           <Link to="/propuestas">
                 <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
           </Link>
