@@ -8,6 +8,9 @@ import "../../styles/solicitud.css";
 export const Solicitud = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  const datauser2 = JSON.parse(localStorage.getItem('data_user'));
+  
+  
   // const user_param= localStorage.gettItem("data_user");
 
   return (
@@ -16,9 +19,10 @@ export const Solicitud = (props) => {
         <div className="my-0 mx-0">
           {" "}
           <span>
-            {/* {user_param.name} */}
+              <div >usario: <b>{datauser2.name}</b></div>;
           </span>
         </div>
+
         <div className="center">
           <div className="my-2">
             <hr />
@@ -86,7 +90,7 @@ export const Solicitud = (props) => {
                         <input
                           type="text"
                           name="name"
-                          defaultValue="Número de Teléfono"
+                          placeholder="Número de Teléfono"
                         />
                       </label>
                     </form>

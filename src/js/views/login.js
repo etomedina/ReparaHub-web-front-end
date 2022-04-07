@@ -46,8 +46,8 @@ export const Login = (props) => {
 			  
 		 })
 		 const datap = await resp.json();
-		 console.log(datap);
-		 localStorage.setItem("data_user", datap);
+		 //console.log(datap);
+		 localStorage.setItem("data_user", JSON.stringify(datap));
 		 //console.log=(`que es esto ${datap.email} `) 
 		// console.log(`que es esto ${datap.name},${datap.familyname},${datap.email},${datap.id}`)
 		// console.log(`after incrementing, counts value is ${token}.`);
@@ -55,6 +55,11 @@ export const Login = (props) => {
 
 		// console.log("This is the data you requested", datap);
 		// return datap
+		//const datauser = JSON.stringify(localStorage.getItem('data_user'))
+		//this.DATA = JSON.parse(localStorage.getItem('contact_form'));
+		
+		//const datauser = JSON.parse(localStorage.getItem('data_user'));
+		//console.log(datauser)
 		return history.push("/solicitud");
 	}	
 	
