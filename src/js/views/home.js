@@ -1,18 +1,19 @@
 import React from "react";
 import repara_01 from "../../img/repara_01.jpg"
 import repara_02 from "../../img/repara_02.jpg"
+import taller_01 from "../../img/taller_01.jpg"
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
 	return (
 	<div className="container mt-3 d-flex flex-column flex-nowrap align-items-center">
-		<div class="jumbotron jumbotron-fluid d-flex flex-column flex-nowrap justify-content-around p-2">
+		<div className="jumbotron jumbotron-fluid d-flex flex-column flex-nowrap justify-content-around p-2" style={{backgroundImage: `url(${taller_01})` }}>
 				<div className="d-flex flex-row flex-nowrap">
 					<div className="col-6"></div>
-					<h1 class="col-6 display-jt px-4 py-2 my-2 justify-content-end">Repara Hub es una nueva forma de solicitar servicio técnico automotriz</h1>
+					<h1 className="col-6 display-jt px-4 py-2 my-2 justify-content-end">Repara Hub es una nueva forma de solicitar servicio técnico automotriz</h1>
 				</div>
-				<p class="display-jt px-4 py-1 m-0 d-flex justify-content-end">Le solucionamos la falla de tu vehículo en un par de clics</p>
+				<p className="display-jt px-4 py-1 m-0 d-flex justify-content-end">Le solucionamos la falla de tu vehículo en un par de clics</p>
 		</div>
 		<div className="menu-about mt-3 p-1 d-flex flex-column flex-nowrap align-items-center">
 			<p className='about-title m-0'> Conoce Repara Hub</p>
@@ -41,5 +42,4 @@ export const Home = () => {
 	</div>
 	);
 	};
-
 
