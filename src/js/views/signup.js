@@ -16,6 +16,7 @@ export const SignUp = (props) => {
 		name:"",
 		familyname: "",
 		email: "",
+		telephone:"",
 		password:"",
 		password_confirm: "",
 	})
@@ -38,9 +39,9 @@ export const SignUp = (props) => {
 		);
 		const body = await response.json();
 		if (!response.ok){
-			return true;
+			return false;
 		}
-		else return false;
+		else return true;
 	}	
 
 
@@ -120,6 +121,29 @@ export const SignUp = (props) => {
 					
 				</div>
 				<div className="form-group">
+					{/* Telephone */}
+					<input 
+					type="text" 
+					className="form-control" 
+					id="form-06" 
+					placeholder="04xx-xxx-xxxx"
+					value = {usuario.telephone}
+					// onKeyPress = {(e) =>{
+					// 	if (e.key.search(/[a-z]/) ===-1){
+					// 		e.preventDefault();
+					// 		e.stopPropagation();
+					// 		return;
+					// 	}
+					// }}
+					onChange={(e) => {
+						setUsuario({
+							...usuario,
+							telephone: e.target.value,
+						});
+					}}/>
+					
+				</div>
+				<div className="form-group">
 					{/* Password */}
 					<input 
 					type="password" 
@@ -188,6 +212,7 @@ export const SignUp = (props) => {
 							name:"",
 							familyname: "",
 							email: "",
+							telephone: "",
 							password:"",
 							password_confirm: "",
 							});}
@@ -201,7 +226,7 @@ export const SignUp = (props) => {
 						
 					<Link to="/login">
 						<span className="btn btn-primary btn-sm" href="#" role="button">
-						Ir a login
+						Ingresar
 						</span>
 					</Link>
 					</span>

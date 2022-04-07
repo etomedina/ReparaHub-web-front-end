@@ -8,12 +8,16 @@ import "../../styles/solicitud.css";
 export const Solicitud = (props) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  // const user_param= localStorage.gettItem("data_user");
+
   return (
     <form className="d-flex bloque1">
       <div className="row align1">
         <div className="my-0 mx-0">
           {" "}
-          <span>Bienvenido: User_name</span>
+          <span>
+            {/* {user_param.name} */}
+          </span>
         </div>
         <div className="center">
           <div className="my-2">
@@ -117,9 +121,9 @@ export const Solicitud = (props) => {
                 </select>
             </div>
             <div>    
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
+                <div className="mb-3">
+                    <label for="exampleFormControlTextarea1" className="form-label"></label>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
                 </div>
             </div>
             <div>
@@ -142,7 +146,10 @@ export const Solicitud = (props) => {
                 </div>
         </div>
         <div>
-            <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
+          <Link to="/propuestas">
+                <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
+          </Link>
+            
         </div>
         
       </div>

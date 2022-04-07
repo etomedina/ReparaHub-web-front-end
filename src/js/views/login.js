@@ -46,6 +46,8 @@ export const Login = (props) => {
 			  
 		 })
 		 const datap = await resp.json();
+		 console.log(datap);
+		 localStorage.setItem("data_user", datap);
 		 //console.log=(`que es esto ${datap.email} `) 
 		// console.log(`que es esto ${datap.name},${datap.familyname},${datap.email},${datap.id}`)
 		// console.log(`after incrementing, counts value is ${token}.`);
@@ -132,12 +134,12 @@ export const Login = (props) => {
 				>Ingresar</button>
 
 				<div  className="p-3 bg-light border" >
-					<span>Ya tienes cuenta?
-						{/* Boton para enviar al usuario a la vista Login */}
+					<span>No tienes cuenta?
+						{/* Boton para enviar al usuario a la vista Sign Up */}
 						
-					<Link to="/login">
+					<Link to="/signup">
 						<span className="btn btn-primary btn-sm" href="#" role="button">
-						Ir a login
+						Registrarse
 						</span>
 					</Link>
 					</span>
