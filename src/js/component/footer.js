@@ -22,7 +22,7 @@ export const Footer = () => (
 					{/* <button className="btn btn-light">Informacion para prestadores de servicios</button> */}
 					<button className="btn font-weight-bolder text-white"> Informacion para prestadores de servicios</button>
 				</Link>
-				<Link to="/terminos">
+				<Link to="/privacidad">
 					{/* <button className="btn btn-light">Politicas de privacidad</button> */}
 					<button className="btn font-weight-bolder text-white"> Politicas de privacidad</button>
 				</Link>

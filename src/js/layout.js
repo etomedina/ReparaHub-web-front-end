@@ -14,6 +14,8 @@ import { Ayuda } from "./views/ayuda";
 import { Privacidad } from "./views/privacidad";
 import { Proveedores } from "./views/proveedores";
 import { Terminos } from "./views/terminos";
+import { Propuesta } from "./views/propuestas";
+import { Servicio } from "./views/service";
 import "../../src/styles/home.css";
 
 //create your first component
@@ -54,6 +56,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/solicitud">
 							<Solicitud />
+						</Route>
+						<Route exact path="/propuestas">
+							<Propuesta />
+						</Route>
+						<Route exact path="/service">
+							<Servicio />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

@@ -8,7 +8,7 @@ export const Privacidad = props => {
 	const params = useParams();
 	return (
 		<div className="jumbotron">
-			<h1 className="display-5">Terminos y condiciones</h1>
+			<h1 className="display-5">Politicas de privacidad</h1>
 
 			<hr className="my-4" />
 

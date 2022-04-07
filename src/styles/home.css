@@ -57,10 +57,14 @@
         height: 40vh;
       }
 .jumbotron {
-  background-image: url("http://localhost:5000/taller_01.jpg"); 
+  /* background-image: url("../img/taller_01.jpg");  */
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 2rem;
+  opacity: 1;
+
+
+
 }
 .display-jt{
   display: block;
