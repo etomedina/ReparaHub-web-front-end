@@ -211,3 +211,16 @@ hr.break-about {
 .login-form{
   height: 60vh;
 }
+
+select {
+  width: 100%;
+  padding: .375rem .5rem;
+  line-height: 1.5;
+}
+.remember-box {
+  height:10px;
+  font-size: .9rem;
+  text-align: end;
+
+}
+

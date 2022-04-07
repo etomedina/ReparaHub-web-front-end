@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/home.css";
 
 // import "../../styles/solicitud.css";
 // import "../../styles/home.css";
@@ -15,8 +16,8 @@ export const Solicitud = (props) => {
   // const user_param= localStorage.gettItem("data_user");
 
   return (
-    <form className="d-flex bloque1">
-      <div className="row align1">
+    <div className="container m-0 d-flex flex-column flex-nowrap align-items-center">
+
         <div className="my-0 mx-0">
           {" "}
             <span>
@@ -32,11 +33,11 @@ export const Solicitud = (props) => {
             <b>QUE PROBLEMA TIENE TU VEHICULO?</b>
           </h6>
         </div>
-        <div className="center1">
-          <div className="align1">
-            <div className="col d-grid gap-3 my-2">
+
+        <form>
+            <div className="col p-3 d-grid gap-3 my-2">
               <div className="make">
-                <select>
+                <select className="rounded-pill">
                   <option select="defaultValue">
                     Selecciona marca de tu vehiculo
                   </option>
@@ -44,7 +45,7 @@ export const Solicitud = (props) => {
                 </select>
               </div>
               <div className="model">
-                <select>
+                <select className="rounded-pill">
                   <option>Selecciona modelo de tu vehiculo</option>
                   {store.models.map((model, index) => (
                     <option key={index} value={model}>
@@ -54,7 +55,7 @@ export const Solicitud = (props) => {
                 </select>
               </div>
               <div className="category">
-                <select>
+                <select className="rounded-pill">
                   <option>Selecciona categoria de tu vehiculo</option>
                   {store.categorys.map((category, index) => (
                     <option key={index} value={category}>
@@ -63,40 +64,28 @@ export const Solicitud = (props) => {
                   ))}
                 </select>
               </div>
-            </div>
-          </div>
-          <div className="d-grid gap-2 my-7 mx-15 align1 ">
-            <div className="row row-cols-2 gap-3 align3  ">
-              <div className="row d-grid gap-3 gx-5">
-                <div>
-                  <select>
-                    <option select="defaultValue">Transmision</option>
-                    <option value="1">Automatico</option>
-                    <option value="2">Manual</option>
-                  </select>
-                </div>
-                <div>
-                  <select>
-                    <option select="defaultValue">Año</option>
-                    <option value="1">2022</option>
-                    <option value="2">2021</option>
-                  </select>
-                </div>
-              </div>
-              <div className="row d-grid gap-2">
-                <div>
-                  <div className="col">
-                    <form>
+              <div className="d-flex flex-row justify-content-between mx-1">
+                  <div className="d-flex gap-3 flex-column flex-nowrap justify-content-between">
+                    <select className="rounded-pill">
+                        <option select="defaultValue">Transmision</option>
+                        <option value="1">Automatico</option>
+                        <option value="2">Manual</option>
+                      </select>
+                      <select className="rounded-pill">
+                        <option select="defaultValue">Año</option>
+                        <option value="1">2022</option>
+                        <option value="2">2021</option>
+                      </select>
                       <label>
-                        <input
-                          type="text"
-                          name="name"
-                          placeholder="Número de Teléfono"
-                        />
+                            <input
+                              className="rounded-pill"
+                              type="text"
+                              name="name"
+                              placeholder="Número de Teléfono"
+                            />
                       </label>
-                    </form>
-                  </div>
-                  <div>
+                    </div>
+                      <div className="remember-box">
                     {/* Casilla Recordar */}
                     <input
                       className="form-check-input"
@@ -104,34 +93,20 @@ export const Solicitud = (props) => {
                       value=""
                       id="defaultCheck1"
                     />
-                    <label className="form-check-label" htmlFor="defaultCheck1">
+                    <label className="form-check-label text-dark" htmlFor="defaultCheck1">
                       Guardar mi seleccion predeterminada
                     </label>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <div className="my-2">
-            <hr />
-        </div>
-        <div>
-            <div>
-                <select className="custom-select">
+                  
+                  <select className="custom-select rounded-pill">
                     <option select="defaultValue">Que falla tiene tu vehiculo</option>
                     <option value="1">No funciona aire acondicionado</option>
                     <option value="2">Manual</option>
                 </select>
-            </div>
-            <div>    
-                <div className="mb-3">
                     <label for="exampleFormControlTextarea1" className="form-label"></label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
-                </div>
-            </div>
-            <div>
+                    <textarea className="form-control rounded my-0" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
+                <div>
                 <script><div>
                             if (navigator.geolocation){
                                 navigator.geolocation.getCurrentPosition
@@ -149,16 +124,26 @@ export const Solicitud = (props) => {
                     <p className="h6" >Ubicación actual/Seleccionada: </p>
 					<div  id="data">  </div>	
                 </div>
+<<<<<<< HEAD
         </div>
         <div className="d-flex justify-content-center my-1">
           <Link to="/propuestas">
+=======
+                <Link to="/propuestas">
+>>>>>>> 7e795c46ae8d24a545585079b277737f8d55dbdf
                 <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
           </Link>
-            
-        </div>
-        
-      </div>
-    </form>
+            </div>
+            </form>
+    </div>
+
+
+
+
+
+
+
+ 
   );    
 };
 
