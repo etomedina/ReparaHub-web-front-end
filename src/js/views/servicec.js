@@ -100,11 +100,65 @@ export const Servicioc = props => {
 				</div>
 				<div className="d-flex flex-column aprobacion-2 align-items-center mt-0 text-white p-2 mb-2">
 					<p className="p-2 m-0" >Si está conforme con la asistencia ofrecida, puede seleccionar el botón <strong>aceptar</strong>.</p>
-					<Link to="/solicitud">
-						<button type="button" className="btn btn-success rounded-pill my-2">
-							ACEPTAR
-						</button>
-					</Link>
+					<button type="button" className="btn btn-success rounded-pill my-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+						ACEPTAR
+					</button>
+
+					<div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div className="modal-dialog modal-dialog-centered">
+							<div className="modal-content">
+								<div className="modal-header">
+									<h6 className="modal-title text-dark" id="staticBackdropLabel"><strong>Por favor califica el servicio prestado</strong></h6>
+								</div>
+								<div className="modal-body text-dark d-flex flex-column align-items-center">
+									<form className='w-100'>
+										<p className="clasificacion rounded-pill p-4 d-flex flex-row justify-content-around">
+											<input
+												id="radio1"
+												type="radio"
+												name="estrellas"
+												value="5"
+											/>
+											<label for="radio1">★</label>
+											<input
+												id="radio2"
+												type="radio"
+												name="estrellas"
+												value="4"
+											/>
+											<label for="radio2">★</label>
+											<input
+												id="radio3"
+												type="radio"
+												name="estrellas"
+												value="3"
+											/>
+											<label for="radio3">★</label>
+											<input
+												id="radio4"
+												type="radio"
+												name="estrellas"
+												value="2"
+											/>
+											<label for="radio4">★</label>
+											<input
+												id="radio5"
+												type="radio"
+												name="estrellas"
+												value="1"
+											/>
+											<label for="radio5">★</label>
+										</p>
+
+									</form>
+									<Link to="/solicitud">
+										<span className="btn btn-success rounded-pill" href="#" role="button" data-bs-dismiss="modal" aria-label="Close">FInalizar</span>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 
 			</div>
