@@ -127,7 +127,7 @@ export const Solicitud = (props) => {
             </script>
             <p className="location-title">Ubicación actual:</p>
             <div id="data"><div className="spinner-border text-dark" role="status">
-              <span class="sr-only">Loading...</span>
+              <span className="sr-only">Loading...</span>
             </div></div>
           </div>
 

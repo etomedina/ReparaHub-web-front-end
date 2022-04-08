@@ -14,6 +14,7 @@ export const Propuesta = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	const history = useHistory();
+	const datauser2 = JSON.parse(localStorage.getItem('data_user'));
 
 	return (
 		<div className="container m-0 d-flex flex-column flex-nowrap align-items-center">

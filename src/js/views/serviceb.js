@@ -10,6 +10,7 @@ import "../../styles/home.css";
 export const Serviciob = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const datauser2 = JSON.parse(localStorage.getItem('data_user'));
 	// const history = useHistory();
 
 	return (
