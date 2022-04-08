@@ -30,7 +30,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (  //p-6 d-flex flex-column bg-primary bg-opacity-50
-		<div className= 'container-fluid p-0 m-0 col-12'>
+		<div className='container-fluid p-0 m-0 col-12'>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Switch>
@@ -83,22 +83,22 @@ const Layout = () => {
 							<Footersmall />
 						</Route>
 						<Route exact path="/servicea">
-							<NavbarPrivate />	
+							<NavbarPrivate />
 							<Servicioa />
 							<Footersmall />
 						</Route>
 						<Route exact path="/serviceb">
-							<NavbarPrivate />	
+							<NavbarPrivate />
 							<Serviciob />
 							<Footersmall />
 						</Route>
 						<Route exact path="/servicec">
-							<NavbarPrivate />	
+							<NavbarPrivate />
 							<Servicioc />
 							<Footersmall />
 						</Route>
 						<Route exact path="/serviced">
-							<NavbarPrivate />	
+							<NavbarPrivate />
 							<Serviciod />
 							<Footersmall />
 						</Route>

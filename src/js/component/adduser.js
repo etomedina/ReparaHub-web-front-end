@@ -6,11 +6,11 @@ export const Adduser = () => {
     return (
         <div>
             <form>
-                
+
             </form>
         </div>
 
-    );    
+    );
 
 
 };

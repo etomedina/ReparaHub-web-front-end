@@ -15,20 +15,20 @@ export const Serviciod = props => {
 	return (
 		<div className="container m-0 d-flex flex-column flex-nowrap align-items-center">
 			<div className="user-banner align-self-start p-3">
-          {" "}
-            <span>
-                <div className='user-banner-text'>Usuario: <b>BuBulala{/* {datauser2.name} {datauser2.familyname} */} </b></div>
-            </span>
-        </div>
-        <hr className="separador-service"></hr> 
-          <h6 className="my-2 text-center">
-            <b>SELECCIONASTE ESTE PROVEEDOR DE SERVICIO</b>
-          </h6>
+				{" "}
+				<span>
+					<div className='user-banner-text'>Usuario: <b>BuBulala{/* {datauser2.name} {datauser2.familyname} */} </b></div>
+				</span>
+			</div>
+			<hr className="separador-service"></hr>
+			<h6 className="my-2 text-center">
+				<b>SELECCIONASTE ESTE PROVEEDOR DE SERVICIO</b>
+			</h6>
 
 			<div className="container-sm gap-3 d-flex flex-column justify-content-between">
 
-			<div className="row provider-card p-2">
-				<div className="col-8 d-flex flex-column justify-content-between p-1">
+				<div className="row provider-card p-2">
+					<div className="col-8 d-flex flex-column justify-content-between p-1">
 						<span className="provider-name">
 							{store.proveedores.name}
 							PDR Service
@@ -89,25 +89,25 @@ export const Serviciod = props => {
 							className=" img-fluid rounded-circle p-1"
 						></img>
 					</div>
-					
+
 				</div>
 
-            <div className="d-flex flex-column aprobacion-1 bg-success justify-content-center text-white p-2">
-				<p className="p-2 m-0"><strong>Su proveedor de servicio le contactará en breves momentos.</strong></p>
+				<div className="d-flex flex-column aprobacion-1 bg-success justify-content-center text-white p-2">
+					<p className="p-2 m-0"><strong>Su proveedor de servicio le contactará en breves momentos.</strong></p>
+				</div>
+				<div className="d-flex flex-column aprobacion-2 justify-content-center text-white p-2">
+					<p className="p-2 m-0">Consulte con su proveedor de servicio la vigencia de su garantía</p>
+				</div>
+				<div className="d-flex flex-column aprobacion-2 align-items-center mt-0 text-white p-2 mb-2">
+					<p className="p-2 m-0" >Si está conforme con la asistencia ofrecida, puede seleccionar el botón <strong>aceptar</strong>.</p>
+					<Link to="/solicitud">
+						<button type="button" className="btn btn-success rounded-pill my-2">
+							ACEPTAR
+						</button>
+					</Link>
+				</div>
+
 			</div>
-			<div className="d-flex flex-column aprobacion-2 justify-content-center text-white p-2">
-				<p className="p-2 m-0">Consulte con su proveedor de servicio la vigencia de su garantía</p>
-			</div>
-			<div className="d-flex flex-column aprobacion-2 align-items-center mt-0 text-white p-2 mb-2">
-			<p className="p-2 m-0" >Si está conforme con la asistencia ofrecida, puede seleccionar el botón <strong>aceptar</strong>.</p>
-				<Link to="/solicitud">
-					<button type="button" className="btn btn-success rounded-pill my-2">
-						ACEPTAR
-					</button>
-				</Link>
-			</div>
-			
-		</div>
 		</div>
 	);
 };

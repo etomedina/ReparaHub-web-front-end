@@ -18,21 +18,21 @@ export const Propuesta = props => {
 	return (
 		<div className="container m-0 d-flex flex-column flex-nowrap align-items-center">
 			<div className="user-banner align-self-start p-3">
-          {" "}
-            <span>
-                <div className='user-banner-text'>Usuario: <b>BuBulala{/* {datauser2.name} {datauser2.familyname} */} </b></div>
-            </span>
-        </div>
-        <hr className="separador-service"></hr> 
-          <h6 className="my-2 text-center">
-            <b>PROPUESTAS DE PRESTADORES DE SERVICIOS</b>
-          </h6>
+				{" "}
+				<span>
+					<div className='user-banner-text'>Usuario: <b>BuBulala{/* {datauser2.name} {datauser2.familyname} */} </b></div>
+				</span>
+			</div>
+			<hr className="separador-service"></hr>
+			<h6 className="my-2 text-center">
+				<b>PROPUESTAS DE PRESTADORES DE SERVICIOS</b>
+			</h6>
 
 			<div className="container-sm gap-3 d-flex flex-column justify-content-between">
 
 				{/* Proveedor 1 */}
 				<div className="row provider-card p-2">
-				<div className="col-8 d-flex flex-column justify-content-between p-1">
+					<div className="col-8 d-flex flex-column justify-content-between p-1">
 						<span className="provider-name">
 							{store.proveedores.name}
 							Toyota Fix 2000
@@ -91,24 +91,24 @@ export const Propuesta = props => {
 							className=" img-fluid rounded-circle p-1"
 						></img>
 
-				<div className="align-self-center">
-				<Link to="/servicea">
-					<button type="button" className="btn btn-success rounded-pill my-1">
-						Contratar
-					</button>
-				</Link>
-			</div>
+						<div className="align-self-center">
+							<Link to="/servicea">
+								<button type="button" className="btn btn-success rounded-pill my-1">
+									Contratar
+								</button>
+							</Link>
+						</div>
 
 					</div>
-					
+
 				</div>
-			
+
 
 
 				{/* Proveedor 2 */}
 				<div className="row provider-card p-2">
-				<div className="col-8 d-flex flex-column justify-content-between p-1">
-						<span className="provider-name" style={{fontSize: `1.1rem` }}>
+					<div className="col-8 d-flex flex-column justify-content-between p-1">
+						<span className="provider-name" style={{ fontSize: `1.1rem` }}>
 							{store.proveedores.name}
 							Auto Repair Technology
 						</span>
@@ -169,21 +169,21 @@ export const Propuesta = props => {
 							className=" img-fluid rounded-circle p-1"
 						></img>
 
-			<div className="align-self-center">
-				<Link to="/serviceb">
-					<button type="button" className="btn btn-success rounded-pill my-1">
-						Contratar
-					</button>
-				</Link>
-			</div>
+						<div className="align-self-center">
+							<Link to="/serviceb">
+								<button type="button" className="btn btn-success rounded-pill my-1">
+									Contratar
+								</button>
+							</Link>
+						</div>
 
 					</div>
-					
+
 				</div>
 
 				{/* Proveedor 3*/}
 				<div className="row provider-card p-2">
-				<div className="col-8 d-flex flex-column justify-content-between p-1">
+					<div className="col-8 d-flex flex-column justify-content-between p-1">
 						<span className="provider-name">
 							{store.proveedores.name}
 							Chasis Service
@@ -245,21 +245,21 @@ export const Propuesta = props => {
 							className=" img-fluid rounded-circle p-1"
 						></img>
 
-				<div className="align-self-center">
-				<Link to="/servicec">
-					<button type="button" className="btn btn-success rounded-pill my-1">
-						Contratar
-					</button>
-				</Link>
-			</div>
+						<div className="align-self-center">
+							<Link to="/servicec">
+								<button type="button" className="btn btn-success rounded-pill my-1">
+									Contratar
+								</button>
+							</Link>
+						</div>
 
 					</div>
-					
+
 				</div>
 
 				{/* Proveedor 4 */}
 				<div className="row provider-card p-2">
-				<div className="col-8 d-flex flex-column justify-content-between p-1">
+					<div className="col-8 d-flex flex-column justify-content-between p-1">
 						<span className="provider-name">
 							{store.proveedores.name}
 							PDR Service
@@ -322,16 +322,16 @@ export const Propuesta = props => {
 						></img>
 
 
-					
-				<div className="align-self-center">
-				<Link to="/serviced">
-					<button type="button" className="btn btn-success rounded-pill my-1">
-						Contratar
-					</button>
-				</Link>
-			</div>
+
+						<div className="align-self-center">
+							<Link to="/serviced">
+								<button type="button" className="btn btn-success rounded-pill my-1">
+									Contratar
+								</button>
+							</Link>
+						</div>
 					</div>
-		</div>
+				</div>
 
 			</div>
 			<div className="d-flex justify-content-center">

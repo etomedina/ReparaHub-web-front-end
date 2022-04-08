@@ -16,7 +16,7 @@ export const Terminos = props => {
 
 
 			<Link to="/">
-			<button className="btn rounded-pill btn-register mb-3">Regresar al inicio</button>
+				<button className="btn rounded-pill btn-register mb-3">Regresar al inicio</button>
 			</Link>
 		</div>
 	);

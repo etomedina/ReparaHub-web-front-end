@@ -12,10 +12,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-				
+
 			],
-			models : [],
-			categorys : [],
+			models: [],
+			categorys: [],
 
 			proveedores: [
 				{
@@ -50,14 +50,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
-			getModels: async() => {
+			getModels: async () => {
 				const response = await fetch(
 					'https://parseapi.back4app.com/classes/Carmodels_Car_Model_List_Toyota?limit=80', {
-						headers: {
-							'X-Parse-Application-Id': 'NQYSBMB8Y8nB2PusmrmtZmoZ6pTxwyLoG1QQ3ann', // This is your app's application id
-							'X-Parse-REST-API-Key': 't7Iu9h7kndNKtNzbhcTKCSsJVz30fPTKQfzkwV5g', // This is your app's REST API key
-						}
+					headers: {
+						'X-Parse-Application-Id': 'NQYSBMB8Y8nB2PusmrmtZmoZ6pTxwyLoG1QQ3ann', // This is your app's application id
+						'X-Parse-REST-API-Key': 't7Iu9h7kndNKtNzbhcTKCSsJVz30fPTKQfzkwV5g', // This is your app's REST API key
 					}
+				}
 				);
 				const body = await response.json();
 				if (!response.ok) return;
@@ -66,7 +66,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					models1.push(model.Model);
 				}
 				// setStore({
-					// models: models1
+				// models: models1
 				// });
 
 				let uniqueModel = models1.filter((element, index) => {
@@ -77,14 +77,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 			//get category clone of get model
-			getCategorys: async() => {
+			getCategorys: async () => {
 				const response = await fetch(
 					'https://parseapi.back4app.com/classes/Carmodels_Car_Model_List_Toyota?limit=80', {
-						headers: {
-							'X-Parse-Application-Id': 'NQYSBMB8Y8nB2PusmrmtZmoZ6pTxwyLoG1QQ3ann', // This is your app's application id
-							'X-Parse-REST-API-Key': 't7Iu9h7kndNKtNzbhcTKCSsJVz30fPTKQfzkwV5g', // This is your app's REST API key
-						}
+					headers: {
+						'X-Parse-Application-Id': 'NQYSBMB8Y8nB2PusmrmtZmoZ6pTxwyLoG1QQ3ann', // This is your app's application id
+						'X-Parse-REST-API-Key': 't7Iu9h7kndNKtNzbhcTKCSsJVz30fPTKQfzkwV5g', // This is your app's REST API key
 					}
+				}
 				);
 				const body = await response.json();
 				if (!response.ok) return;
@@ -92,8 +92,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				for (let category of body.results) {
 					categorys1.push(category.Category);
 				}
-				
-				
+
+
 				let uniqueCategory = categorys1.filter((element, index) => {
 					return categorys1.indexOf(element) === index;
 				});
@@ -121,16 +121,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
-			//reset the global store
+				//reset the global store
 				setStore({ demo: demo });
 			},
-			
+
 			// validateInput: (inputValue) => {
 			// 	if(inputValue === "") alert("The input cannot be empty");
 			// 		return("Esta mal");
 			// return("Grabar registo en base de dato");
 
-			
+
 			// }
 
 		}
