@@ -308,7 +308,7 @@ export const Propuesta = props => {
 				</button>
 			</div>
 			<div className="d-flex justify-content-center">
-				<Link to="/">
+				<Link to="/solicitud">
 					<button type="button" className="btn btn-primary btn-lg my-5">
 						CANCELAR
 					</button>

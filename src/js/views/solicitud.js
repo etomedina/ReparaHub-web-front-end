@@ -75,6 +75,14 @@ export const Solicitud = (props) => {
                         <option select="defaultValue">Año</option>
                         <option value="1">2022</option>
                         <option value="2">2021</option>
+                        <option value="3">2020</option>
+                        <option value="3">2019</option>
+                        <option value="4">2018</option>
+                        <option value="5">2017</option>
+                        <option value="6">2016</option>
+                        <option value="7">2015</option>
+                        <option value="8">2014</option>
+                        <option value="9">2013</option>
                       </select>
                       <label>
                             <input
@@ -102,7 +110,12 @@ export const Solicitud = (props) => {
                   <select className="custom-select rounded-pill">
                     <option select="defaultValue">Que falla tiene tu vehiculo</option>
                     <option value="1">No funciona aire acondicionado</option>
-                    <option value="2">Manual</option>
+                    <option value="2">Fallas en el radiador </option>
+                    <option value="3">Falla en el embrague</option>
+                    <option value="4">EL vehiculo no arranca</option>
+                    <option value="5">Problemas en la suspensión</option>
+                    <option value="6">Problemas con un caucho</option>
+                    
                 </select>
                     <label for="exampleFormControlTextarea1" className="form-label"></label>
                     <textarea className="form-control rounded my-0" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
@@ -124,13 +137,9 @@ export const Solicitud = (props) => {
                     <p className="h6" >Ubicación actual/Seleccionada: </p>
 					<div  id="data">  </div>	
                 </div>
-<<<<<<< HEAD
         </div>
         <div className="d-flex justify-content-center my-1">
           <Link to="/propuestas">
-=======
-                <Link to="/propuestas">
->>>>>>> 7e795c46ae8d24a545585079b277737f8d55dbdf
                 <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
           </Link>
             </div>

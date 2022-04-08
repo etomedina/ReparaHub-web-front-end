@@ -83,7 +83,7 @@ export const Servicio = props => {
 			</div>
 
             <div className="d-flex justify-content-center">
-				<Link to="/login">
+				<Link to="/solicitud">
 					<button type="button" className="btn btn-primary btn-lg my-5">
 						ACEPTAR
 					</button>
