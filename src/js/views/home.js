@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
 	return (
-		<div className="container m-0 d-flex flex-column flex-nowrap align-items-center">
+		<div className="container d-flex flex-column flex-nowrap align-items-center">
 			<div className="jumbotron jumbotron-fluid d-flex flex-column flex-nowrap justify-content-around mt-2 p-2" style={{ backgroundImage: `url(${taller_01})` }}>
 				<div className="d-flex flex-row flex-nowrap">
 					<div className="col-6"></div>
@@ -35,7 +35,7 @@ export const Home = () => {
 				<p className="service-exception align-self-end m-1 px-3	">*Solo disponible en el área metropolitna de Caracas</p>
 			</div>
 
-			<div className="llamado-registro my-3 px-3 py-1 d-flex flex-row flex-nowrap justify-content-between align-items-center">
+			<div className="llamado-registro my-3 px-3 py-1 d-flex flex-row flex-nowrap justify-content-evenly align-items-center">
 				<div className="d-flex flex-column flex-nowrap p-0 m-0"><p className="call-to-action p-0 m-0">¡No espere más!</p><p className='action-down p-0 m-0'>Regístrese con unos simples pasos</p></div>
 				<Link to="/signup">
 					<button className="btn rounded-pill btn-register">Registro</button>

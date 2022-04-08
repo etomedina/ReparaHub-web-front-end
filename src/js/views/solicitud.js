@@ -20,7 +20,7 @@ export const Solicitud = (props) => {
       <div className="user-banner align-self-start p-3">
         {" "}
         <span>
-          <div className='user-banner-text'>Usuario: <b>BuBulala{/* {datauser2.name} {datauser2.familyname} */} </b></div>
+        <div className='user-banner-text'>Usuario: <b>{datauser2.name} {datauser2.familyname} </b></div>
         </span>
       </div>
       <hr className="separador-service"></hr>

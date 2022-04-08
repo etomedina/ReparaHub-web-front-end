@@ -4,327 +4,937 @@
   padding: 0;
 }
 
+@media (max-width: 575.98px) { 
 
-.sample-div {
-  position: absolute;
+        .brand-image {
+          width: 150px;
+        }
+
+        .brand-image>img {
+          max-width: 150px;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .navbar-custom-bg,
+        .footer-custom-bg {
+          background-color: #0f0c04;
+        }
+
+
+        .btn-custom {
+          background-color: #ffcd05;
+          color: #0f0c04;
+          font-weight: bold;
+        }
+
+        .footer-brand>img {
+          max-width: 100px;
+          height: auto;
+          object-fit: contain;
+
+        }
+
+        .separador {
+          size: 1px !important;
+          color: white !important;
+          width: 90%;
+          opacity: 1;
+          justify-self: center;
+        }
+
+
+        .jumbotron {
+          width: 90vw;
+          height: 40vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 2rem;
+        }
+
+        .display-jt {
+          display: block;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 2rem;
+          text-align: end;
+          font-size: 0.95rem;
+          font-weight: bold;
+        }
+
+
+        .container-fluid {
+          background-color: #f1f1f1;
+        }
+
+        .menu-about img {
+          width: 7rem;
+          height: 7rem;
+
+        }
+
+        .about-block {
+          width: 50%;
+        }
+
+        span {
+          font-size: 0.8rem;
+        }
+
+        .about-title {
+          height: 5vh;
+          font-weight: bolder;
+          font-size: 1.3rem;
+        }
+
+        .about {
+          height: 16vh;
+        }
+
+        .menu-about {
+          width: 90vw;
+          height: 55vh;
+          background-color: #ffcc00;
+          border-radius: 2rem;
+        }
+
+
+        .llamado-registro {
+          width: 90vw;
+          height: 10vh;
+          background-color: #0f0c04;
+          border-radius: 1.5rem;
+        }
+
+        .call-to-action {
+          font-size: 1rem;
+          font-weight: bold;
+          color: white;
+        }
+
+        .action-down {
+          font-size: 0.6rem;
+          color: #ffcd05;
+        }
+
+        .btn-register {
+          background-color: #ffcd05;
+          color: #0f0c04;
+          font-weight: bold;
+        }
+
+        .title-1 {
+          font-weight: bolder;
+          font-size: 1rem;
+        }
+
+        .service-exception {
+          text-align: end;
+          font-size: 0.6rem;
+          padding-top: 5px;
+        }
+
+
+        hr.break-about {
+          width: 50%;
+          opacity: 0.5;
+          color: #0f0c04;
+          size: 0.5px;
+        }
+
+        .copyright,
+        .btn-foot {
+          font-size: 0.8rem;
+        }
+
+        .d-grid {
+          width: 90vw;
+          background-color: #ffcd05;
+          border-radius: 2rem;
+        }
+
+        .login-screen {
+          background-color: #0f0c04;
+          width: 100%;
+          height: 100vh;
+        }
+
+        .register-screen {
+          background-color: #0f0c04;
+          width: 100%;
+        }
+
+        .brand-register {
+          width: 50vw;
+          height: 20vh;
+        }
+
+        .brand-register img {
+          width: 100%;
+        }
+
+        .inner-action {
+          width: 80vw;
+          height: 15vh;
+          background-color: #0f0c04;
+          border-radius: 1rem;
+        }
+
+        .current-location {
+          width: 90vw;
+          height: 20vh;
+        }
+
+        .location-title {
+          font-weight: bolder;
+          font-size: 1.2rem;
+        }
+
+        .brand-login {
+          width: 50vw;
+          height: 20vh;
+        }
+
+        .brand-login img {
+          width: 100%;
+        }
+
+        .login-form {
+          height: 60vh;
+        }
+
+        select {
+          width: 100%;
+          padding: .375rem .5rem;
+          line-height: 1.5;
+        }
+
+        .remember-box {
+          width: 50%;
+          height: 10px;
+          font-size: .9rem;
+          text-align: end;
+
+        }
+
+        .phone-n {
+          width: 100%;
+          padding: .375rem .75rem;
+          line-height: 1.5;
+        }
+
+        .user-banner {
+          width: 100%;
+          height: 5vh;
+        }
+
+        .separador-service {
+          size: 1px !important;
+          color: #0f0c04 !important;
+          width: 90%;
+          opacity: 1;
+          justify-self: center;
+        }
+
+        .user-banner-text {
+          font-size: 1rem;
+        }
+
+        .provider-card {
+          background-color: #ffcd05;
+          border-radius: 1rem;
+        }
+
+        span.provider-name {
+          font-size: 1.2rem;
+          font-weight: bolder;
+          color: red;
+        }
+
+        .provider-description {
+          font-size: 0.8rem;
+        }
+
+
+        .provider-deal {
+          margin-top: 0.9rem;
+          font-size: 0.9rem;
+          color: green;
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        label {
+          color: grey;
+        }
+
+        .clasificacion {
+          direction: rtl;
+          unicode-bidi: bidi-override;
+          background-color: #0f0c04;
+        }
+
+        label:hover,
+        label:hover~label {
+          color: #ffcd05;
+        }
+
+        input[type="radio"]:checked~label {
+          color: #ffcd05;
+        }
+
+        .aprobacion-1 {
+          border-radius: 1em;
+          font-size: 0.9 rem;
+        }
+
+        .aprobacion-2 {
+          background-color: #0f0c04;
+          border-radius: 1em;
+          font-size: 0.9 rem;
+        }
+
+        .llamado-prov {
+          background-color: #ffcd05;
+          border-radius: 2rem;
+        }
+
+        .repara-mail {
+          color: red;
+        }
+
+        .llamado-prov2 {
+          background-color: #0f0c04;
+          border-radius: 2rem;
+        }
+
+        .llamado-prov2 img {
+          width: 7rem;
+          height: 7rem;
+        }
+
 }
 
-.transpa-bg {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  opacity: 0.5;
+
+/* ########################################################################################### */
+
+@media (min-width: 576.99px) and (max-width: 991.98px) { 
+        .brand-image {
+          width: 150px;
+        }
+
+        .brand-image>img {
+          max-width: 150px;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .navbar-custom-bg,
+        .footer-custom-bg {
+          background-color: #0f0c04;
+        }
+
+
+        .btn-custom {
+          background-color: #ffcd05;
+          color: #0f0c04;
+          font-weight: bold;
+        }
+
+        .footer-brand>img {
+          max-width: 100px;
+          height: auto;
+          object-fit: contain;
+
+        }
+
+        .separador {
+          size: 1px !important;
+          color: white !important;
+          width: 90%;
+          opacity: 1;
+          justify-self: center;
+        }
+
+
+        .jumbotron {
+          width: 90vw;
+          height: 40vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 2rem;
+        }
+
+        .display-jt {
+          display: block;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 2rem;
+          text-align: end;
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+
+
+        .container-fluid {
+          background-color: #f1f1f1;
+        }
+
+        .menu-about img {
+          width: 12rem;
+          height: 12rem;
+          margin: 1rem;
+
+        }
+
+        .about-block {
+          width: 100%;
+        }
+
+        span {
+          font-size: 1.3rem;
+        }
+
+        .about-title {
+          height: 5vh;
+          font-weight: bolder;
+          font-size: 1.8rem;
+        }
+
+        .about {
+          width:100%;
+          height: 16vh;
+        }
+
+        .menu-about {
+          width: 90vw;
+          height: 50vh;
+          background-color: #ffcc00;
+          border-radius: 2rem;
+        }
+
+
+        .llamado-registro {
+          width: 90vw;
+          height: 15vh;
+          background-color: #0f0c04;
+          border-radius: 1.5rem;
+        }
+
+        .call-to-action {
+          font-size: 2rem;
+          font-weight: bold;
+          color: white;
+        }
+
+        .action-down {
+          font-size: 1.5rem;
+          color: #ffcd05;
+        }
+
+        .btn-register {
+          background-color: #ffcd05;
+          color: #0f0c04;
+          font-weight: bold;
+        }
+
+        .title-1 {
+          font-weight: bolder;
+          font-size: 1.7rem;
+          margin: 0.8rem;
+        }
+
+        .service-exception {
+          text-align: end;
+          font-size: 1.2rem;
+        }
+
+
+        hr.break-about {
+          width: 50%;
+          opacity: 0.5;
+          color: #0f0c04;
+          size: 0.5px;
+        }
+
+        .copyright,
+        .btn-foot {
+          font-size: 0.8rem;
+        }
+
+        .d-grid {
+          width: 90vw;
+          background-color: #ffcd05;
+          border-radius: 2rem;
+        }
+
+        .login-screen {
+          background-color: #0f0c04;
+          width: 100%;
+          height: 100vh;
+        }
+
+        .register-screen {
+          background-color: #0f0c04;
+          width: 100%;
+        }
+
+        .brand-register {
+          width: 50vw;
+          height: 20vh;
+        }
+
+        .brand-register img {
+          width: 100%;
+        }
+
+        .inner-action {
+          width: 80vw;
+          height: 15vh;
+          background-color: #0f0c04;
+          border-radius: 1rem;
+        }
+
+        .current-location {
+          width: 90vw;
+          height: 20vh;
+        }
+
+        .location-title {
+          font-weight: bolder;
+          font-size: 1.2rem;
+        }
+
+        .brand-login {
+          width: 50vw;
+          height: 20vh;
+        }
+
+        .brand-login img {
+          width: 100%;
+        }
+
+        .login-form {
+          height: 60vh;
+        }
+
+        select {
+          width: 100%;
+          padding: .375rem .5rem;
+          line-height: 1.5;
+        }
+
+        .remember-box {
+          width: 50%;
+          height: 10px;
+          font-size: .9rem;
+          text-align: end;
+
+        }
+
+        .phone-n {
+          width: 100%;
+          padding: .375rem .75rem;
+          line-height: 1.5;
+        }
+
+        .user-banner {
+          width: 100%;
+          height: 5vh;
+        }
+
+        .separador-service {
+          size: 1px !important;
+          color: #0f0c04 !important;
+          width: 90%;
+          opacity: 1;
+          justify-self: center;
+        }
+
+        .user-banner-text {
+          font-size: 1rem;
+        }
+
+        .provider-card {
+          background-color: #ffcd05;
+          border-radius: 1rem;
+        }
+
+        span.provider-name {
+          font-size: 1.2rem;
+          font-weight: bolder;
+          color: red;
+        }
+
+        .provider-description {
+          font-size: 0.8rem;
+        }
+
+
+        .provider-deal {
+          margin-top: 0.9rem;
+          font-size: 0.9rem;
+          color: green;
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        label {
+          color: grey;
+        }
+
+        .clasificacion {
+          direction: rtl;
+          unicode-bidi: bidi-override;
+          background-color: #0f0c04;
+        }
+
+        label:hover,
+        label:hover~label {
+          color: #ffcd05;
+        }
+
+        input[type="radio"]:checked~label {
+          color: #ffcd05;
+        }
+
+        .aprobacion-1 {
+          border-radius: 1em;
+          font-size: 0.9 rem;
+        }
+
+        .aprobacion-2 {
+          background-color: #0f0c04;
+          border-radius: 1em;
+          font-size: 0.9 rem;
+        }
+
+        .llamado-prov {
+          background-color: #ffcd05;
+          border-radius: 2rem;
+        }
+
+        .repara-mail {
+          color: red;
+        }
+
+        .llamado-prov2 {
+          background-color: #0f0c04;
+          border-radius: 2rem;
+        }
+
+        .llamado-prov2 img {
+          width: 7rem;
+          height: 7rem;
+        }
 
 }
 
-.content {
-  position: relative;
-  z-index: 10;
+@media (min-width: 991.99px) and (max-width: 1399.98px) {
+
+  .brand-image {
+    width: 150px;
+  }
+
+  .brand-image>img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .navbar-custom-bg,
+  .footer-custom-bg {
+    background-color: #0f0c04;
+  }
+
+
+  .btn-custom {
+    background-color: #ffcd05;
+    color: #0f0c04;
+    font-weight: bold;
+  }
+
+  .footer-brand>img {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+
+  }
+
+  .separador {
+    size: 1px !important;
+    color: white !important;
+    width: 90%;
+    opacity: 1;
+    justify-self: center;
+  }
+
+
+  .jumbotron {
+    width: 90vw;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+  }
+
+  .display-jt {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2rem;
+    text-align: end;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+
+  .container-fluid {
+    background-color: #f1f1f1;
+  }
+
+  .menu-about img {
+    width: 15rem;
+    height: 15rem;
+    margin: 3rem;
+  }
+
+  .about-block {
+    width: 70%;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .about-title {
+    height: 5vh;
+    font-weight: bolder;
+    font-size: 2.9rem;
+  }
+
+  .about {
+    width:100%;
+    height: 16vh;
+  }
+
+  .menu-about {
+    width: 90vw;
+    height: 51vh;
+    background-color: #ffcc00;
+    border-radius: 2rem;
+  }
+
+
+  .llamado-registro {
+    width: 90vw;
+    height: 15vh;
+    background-color: #0f0c04;
+    border-radius: 1.5rem;
+    align-self: center!important;
+  }
+
+  .call-to-action {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .action-down {
+    font-size: 2rem;
+    color: #ffcd05;
+  }
+
+  .btn-register {
+    background-color: #ffcd05;
+    color: #0f0c04;
+    font-weight: bold;
+  }
+
+  .title-1 {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin: 0.8rem;
+  }
+
+  .service-exception {
+    text-align: end;
+    font-size: 1.2rem;
+  }
+
+
+  hr.break-about {
+    width: 50%;
+    opacity: 0.5;
+    color: #0f0c04;
+    size: 0.5px;
+  }
+
+  .copyright,
+  .btn-foot {
+    font-size: 0.8rem;
+  }
+
+  .d-grid {
+    width: 90vw;
+    background-color: #ffcd05;
+    border-radius: 2rem;
+  }
+
+  .login-screen {
+    background-color: #0f0c04;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .register-screen {
+    background-color: #0f0c04;
+    width: 100%;
+  }
+
+  .brand-register {
+    width: 50vw;
+    height: 20vh;
+  }
+
+  .brand-register img {
+    width: 100%;
+  }
+
+  .inner-action {
+    width: 80vw;
+    height: 15vh;
+    background-color: #0f0c04;
+    border-radius: 1rem;
+  }
+
+  .current-location {
+    width: 90vw;
+    height: 20vh;
+  }
+
+  .location-title {
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+
+  .brand-login {
+    width: 50vw;
+    height: 20vh;
+  }
+
+  .brand-login img {
+    width: 100%;
+  }
+
+  .login-form {
+    height: 60vh;
+  }
+
+  select {
+    width: 100%;
+    padding: .375rem .5rem;
+    line-height: 1.5;
+  }
+
+  .remember-box {
+    width: 50%;
+    height: 10px;
+    font-size: .9rem;
+    text-align: end;
+
+  }
+
+  .phone-n {
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+  }
+
+  .user-banner {
+    width: 100%;
+    height: 5vh;
+  }
+
+  .separador-service {
+    size: 1px !important;
+    color: #0f0c04 !important;
+    width: 90%;
+    opacity: 1;
+    justify-self: center;
+  }
+
+  .user-banner-text {
+    font-size: 1rem;
+  }
+
+  .provider-card {
+    background-color: #ffcd05;
+    border-radius: 1rem;
+  }
+
+  span.provider-name {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: red;
+  }
+
+  .provider-description {
+    font-size: 0.8rem;
+  }
+
+
+  .provider-deal {
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    color: green;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  label {
+    color: grey;
+  }
+
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    background-color: #0f0c04;
+  }
+
+  label:hover,
+  label:hover~label {
+    color: #ffcd05;
+  }
+
+  input[type="radio"]:checked~label {
+    color: #ffcd05;
+  }
+
+  .aprobacion-1 {
+    border-radius: 1em;
+    font-size: 0.9 rem;
+  }
+
+  .aprobacion-2 {
+    background-color: #0f0c04;
+    border-radius: 1em;
+    font-size: 0.9 rem;
+  }
+
+  .llamado-prov {
+    background-color: #ffcd05;
+    border-radius: 2rem;
+  }
+
+  .repara-mail {
+    color: red;
+  }
+
+  .llamado-prov2 {
+    background-color: #0f0c04;
+    border-radius: 2rem;
+  }
+
+  .llamado-prov2 img {
+    width: 7rem;
+    height: 7rem;
+  }
+
 }
 
-.brand-image {
-  width: 150px;
-}
 
-.brand-image>img {
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-}
-
-.navbar-custom-bg,
-.footer-custom-bg {
-  background-color: #0f0c04;
-}
-
-
-.btn-custom {
-  background-color: #ffcd05;
-  color: #0f0c04;
-  font-weight: bold;
-}
-
-.footer-brand>img {
-  max-width: 100px;
-  height: auto;
-  object-fit: contain;
-
-}
-
-.separador {
-  size: 1px !important;
-  color: white !important;
-  width: 90%;
-  opacity: 1;
-  justify-self: center;
-}
-
-
-.jumbotron {
-  width: 90vw;
-  height: 40vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 2rem;
-}
-
-.display-jt {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 2rem;
-  text-align: end;
-  font-size: 0.95rem;
-  font-weight: bold;
-}
-
-
-.container-fluid {
-  background-color: #f1f1f1;
-}
-
-.menu-about img {
-  width: 7rem;
-  height: 7rem;
-
-}
-
-.about-block {
-  width: 50%;
-}
-
-span {
-  font-size: 0.8rem;
-}
-
-.about-title {
-  height: 5vh;
-  font-weight: bolder;
-  font-size: 1.3rem;
-}
-
-.about {
-  height: 16vh;
-}
-
-.menu-about {
-  width: 90vw;
-  height: 55vh;
-  background-color: #ffcc00;
-  border-radius: 2rem;
-}
-
-
-.llamado-registro {
-  width: 90vw;
-  height: 10vh;
-  background-color: #0f0c04;
-  border-radius: 1.5rem;
-}
-
-.call-to-action {
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-}
-
-.action-down {
-  font-size: 0.8rem;
-  color: #ffcd05;
-}
-
-.btn-register {
-  background-color: #ffcd05;
-  color: #0f0c04;
-  font-weight: bold;
-}
-
-.title-1 {
-  font-weight: bolder;
-  font-size: 1rem;
-}
-
-.service-exception {
-  text-align: end;
-  font-size: 0.6rem;
-  padding-top: 5px;
-}
-
-
-hr.break-about {
-  width: 50%;
-  opacity: 0.5;
-  color: #0f0c04;
-  size: 0.5px;
-}
-
-.copyright,
-.btn-foot {
-  font-size: 0.8rem;
-}
-
-.d-grid {
-  width: 90vw;
-  background-color: #ffcd05;
-  border-radius: 2rem;
-}
-
-.login-screen {
-  background-color: #0f0c04;
-  width: 100%;
-  height: 100vh;
-}
-
-.register-screen {
-  background-color: #0f0c04;
-  width: 100%;
-}
-
-.brand-register {
-  width: 50vw;
-  height: 20vh;
-}
-
-.brand-register img {
-  width: 100%;
-}
-
-.inner-action {
-  width: 80vw;
-  height: 15vh;
-  background-color: #0f0c04;
-  border-radius: 1rem;
-}
-
-.current-location {
-  width: 90vw;
-  height: 20vh;
-}
-
-.location-title {
-  font-weight: bolder;
-  font-size: 1.2rem;
-}
-
-.brand-login {
-  width: 50vw;
-  height: 20vh;
-}
-
-.brand-login img {
-  width: 100%;
-}
-
-.login-form {
-  height: 60vh;
-}
-
-select {
-  width: 100%;
-  padding: .375rem .5rem;
-  line-height: 1.5;
-}
-
-.remember-box {
-  width: 50%;
-  height: 10px;
-  font-size: .9rem;
-  text-align: end;
-
-}
-
-.phone-n {
-  width: 100%;
-  padding: .375rem .75rem;
-  line-height: 1.5;
-}
-
-.user-banner {
-  width: 100%;
-  height: 5vh;
-}
-
-.separador-service {
-  size: 1px !important;
-  color: #0f0c04 !important;
-  width: 90%;
-  opacity: 1;
-  justify-self: center;
-}
-
-.user-banner-text {
-  font-size: 1rem;
-}
-
-.provider-card {
-  background-color: #ffcd05;
-  border-radius: 1rem;
-}
-
-span.provider-name {
-  font-size: 1.2rem;
-  font-weight: bolder;
-  color: red;
-}
-
-.provider-description {
-  font-size: 0.8rem;
-}
-
-
-.provider-deal {
-  margin-top: 0.9rem;
-  font-size: 0.9rem;
-  color: green;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-label {
-  color: grey;
-}
-
-.clasificacion {
-  direction: rtl;
-  unicode-bidi: bidi-override;
-  background-color: #0f0c04;
-}
-
-label:hover,
-label:hover~label {
-  color: #ffcd05;
-}
-
-input[type="radio"]:checked~label {
-  color: #ffcd05;
-}
-
-.aprobacion-1 {
-  border-radius: 1em;
-  font-size: 0.9 rem;
-}
-
-.aprobacion-2 {
-  background-color: #0f0c04;
-  border-radius: 1em;
-  font-size: 0.9 rem;
-}
-
-.llamado-prov {
-  background-color: #ffcd05;
-  border-radius: 2rem;
-}
-
-.repara-mail {
-  color: red;
-}
-
-.llamado-prov2 {
-  background-color: #0f0c04;
-  border-radius: 2rem;
-}
-
-.llamado-prov2 img {
-  width: 7rem;
-  height: 7rem;
-}
