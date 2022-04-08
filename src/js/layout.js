@@ -16,7 +16,10 @@ import { Privacidad } from "./views/privacidad";
 import { Proveedores } from "./views/proveedores";
 import { Terminos } from "./views/terminos";
 import { Propuesta } from "./views/propuestas";
-import { Servicio } from "./views/service";
+import { Servicioa } from "./views/servicea";
+import { Serviciob } from "./views/serviceb";
+import { Servicioc } from "./views/servicec";
+import { Serviciod } from "./views/serviced";
 import "../../src/styles/home.css";
 import { NavbarPrivate } from "./component/navbarprivate";
 
@@ -79,9 +82,24 @@ const Layout = () => {
 							<Propuesta />
 							<Footersmall />
 						</Route>
-						<Route exact path="/service">
+						<Route exact path="/servicea">
 							<NavbarPrivate />	
-							<Servicio />
+							<Servicioa />
+							<Footersmall />
+						</Route>
+						<Route exact path="/serviceb">
+							<NavbarPrivate />	
+							<Serviciob />
+							<Footersmall />
+						</Route>
+						<Route exact path="/servicec">
+							<NavbarPrivate />	
+							<Servicioc />
+							<Footersmall />
+						</Route>
+						<Route exact path="/serviced">
+							<NavbarPrivate />	
+							<Serviciod />
 							<Footersmall />
 						</Route>
 						<Route>

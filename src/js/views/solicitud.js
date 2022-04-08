@@ -17,27 +17,22 @@ export const Solicitud = (props) => {
 
   return (
     <div className="container m-0 d-flex flex-column flex-nowrap align-items-center">
-
-        <div className="my-0 mx-0">
+        <div className="user-banner align-self-start p-3">
           {" "}
             <span>
-                <div >Usuario: <b>{datauser2.name} {datauser2.familyname} </b></div>
+                <div className='user-banner-text'>Usuario: <b>BuBulala{/* {datauser2.name} {datauser2.familyname} */} </b></div>
             </span>
         </div>
-
-        <div className="center">
-          <div className="my-2">
-            <hr />
-          </div>
+        <hr className="separador-service"></hr> 
           <h6 className="my-2">
-            <b>QUE PROBLEMA TIENE TU VEHICULO?</b>
+            <b>¿QUÉ PROBLEMA PRESENTA SU VEHÍCULO?</b>
           </h6>
-        </div>
+
 
         <form>
-            <div className="col p-3 d-grid gap-3 my-2">
+            <div className="col p-3 d-grid gap-2 my-2">
               <div className="make">
-                <select className="rounded-pill">
+                <select className="rounded-pill border-0">
                   <option select="defaultValue">
                     Selecciona marca de tu vehiculo
                   </option>
@@ -45,7 +40,7 @@ export const Solicitud = (props) => {
                 </select>
               </div>
               <div className="model">
-                <select className="rounded-pill">
+                <select className="rounded-pill border-0">
                   <option>Selecciona modelo de tu vehiculo</option>
                   {store.models.map((model, index) => (
                     <option key={index} value={model}>
@@ -55,7 +50,7 @@ export const Solicitud = (props) => {
                 </select>
               </div>
               <div className="category">
-                <select className="rounded-pill">
+                <select className="rounded-pill border-0">
                   <option>Selecciona categoria de tu vehiculo</option>
                   {store.categorys.map((category, index) => (
                     <option key={index} value={category}>
@@ -65,13 +60,13 @@ export const Solicitud = (props) => {
                 </select>
               </div>
               <div className="d-flex flex-row justify-content-between mx-1">
-                  <div className="d-flex gap-3 flex-column flex-nowrap justify-content-between">
-                    <select className="rounded-pill">
+                  <div className="d-flex gap-2 flex-column flex-nowrap justify-content-between">
+                    <select className="rounded-pill border-0">
                         <option select="defaultValue">Transmision</option>
                         <option value="1">Automatico</option>
                         <option value="2">Manual</option>
                       </select>
-                      <select className="rounded-pill">
+                      <select className="rounded-pill border-0">
                         <option select="defaultValue">Año</option>
                         <option value="1">2022</option>
                         <option value="2">2021</option>
@@ -84,16 +79,8 @@ export const Solicitud = (props) => {
                         <option value="8">2014</option>
                         <option value="9">2013</option>
                       </select>
-                      <label>
-                            <input
-                              className="rounded-pill"
-                              type="text"
-                              name="name"
-                              placeholder="Número de Teléfono"
-                            />
-                      </label>
                     </div>
-                      <div className="remember-box">
+                      <div className="remember-box p-1">
                     {/* Casilla Recordar */}
                     <input
                       className="form-check-input"
@@ -106,7 +93,14 @@ export const Solicitud = (props) => {
                     </label>
                   </div>
                 </div>
-                  
+                <label>
+                            <input
+                              className="rounded-pill border-0 phone-n"
+                              type="text"
+                              name="name"
+                              placeholder="Celular"
+                            />
+                      </label>
                   <select className="custom-select rounded-pill">
                     <option select="defaultValue">Que falla tiene tu vehiculo</option>
                     <option value="1">No funciona aire acondicionado</option>
@@ -118,30 +112,33 @@ export const Solicitud = (props) => {
                     
                 </select>
                     <label for="exampleFormControlTextarea1" className="form-label"></label>
-                    <textarea className="form-control rounded my-0" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
-                <div>
-                <script><div>
-                            if (navigator.geolocation){
-                                navigator.geolocation.getCurrentPosition
-                                (function(place){
-                                    //data.innerHTML=coords.latitude+" - " + place+coords.longitude + place; 
-                                    data.innerHTML="  "+ place.
-								    coords.latitude +" "+ place.
-								    coords.longitude;
-                                  })
-                            }
-                            
-                            </div>
-                            
-                    </script>
-                    <p className="h6" >Ubicación actual/Seleccionada: </p>
-					<div  id="data">  </div>	
-                </div>
+                    <textarea className="form-control rounded-lg" id="exampleFormControlTextarea1" rows="3" placeholder="Explique Brevemente su Incidente..."></textarea>
+
+                    <div className="text-dark d-flex flex-column align-items-center">
+						<script><div>
+							if (navigator.geolocation){
+								navigator.geolocation.getCurrentPosition
+								(function(place){
+									data.innerHTML="latitud:  "+ place.
+									coords.latitude +"<br>longitud: "+ place.
+									coords.longitude;
+									})
+							}</div>
+					</script>	
+						<p className="location-title">Ubicación actual:</p>
+						<div id="data"><div className="spinner-border text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div></div>
+					</div>
+
+
+
+
+                <div className="d-flex flex-row justify-content-around my-1">
+                <Link to="/propuestas">
+                <span className="btn btn-success rounded-pill" href="#" role="button">Solicitar Servicio</span>
+               </Link>
         </div>
-        <div className="d-flex justify-content-center my-1">
-          <Link to="/propuestas">
-                <span className="btn btn-primary btn-sm" href="#" role="button">Solicitar Servicio</span>
-          </Link>
             </div>
             </form>
     </div>

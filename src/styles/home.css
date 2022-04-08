@@ -218,9 +218,102 @@ select {
   line-height: 1.5;
 }
 .remember-box {
+  width:50%;
   height:10px;
   font-size: .9rem;
   text-align: end;
 
 }
+.phone-n{
+width: 100%;
+padding: .375rem .75rem;
+line-height: 1.5;
+}
 
+.user-banner{
+  width: 100%;
+  height: 5vh;
+}
+
+.separador-service {
+  size: 1px !important;
+  color: #0f0c04 !important;
+  width: 90%;
+  opacity: 1;
+  justify-self: center;
+}
+
+.user-banner-text{
+  font-size: 1rem;
+}
+
+.provider-card{
+  background-color: #ffcd05;
+  border-radius: 1rem;
+}
+
+span.provider-name{
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: red;
+}
+
+.provider-description{
+  font-size: 0.8rem;
+}
+
+
+.provider-deal{
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: green;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  background-color: #0f0c04;
+}
+
+label:hover,
+label:hover ~ label {
+  color: #ffcd05;
+}
+
+input[type="radio"]:checked ~ label {
+  color: #ffcd05;
+}
+
+.aprobacion-1 {
+  border-radius: 1em;
+  font-size: 0.9 rem;
+}
+
+.aprobacion-2 {
+  background-color: #0f0c04;
+  border-radius: 1em;
+  font-size: 0.9 rem;
+}
+
+.llamado-prov {
+  background-color: #ffcd05;
+  border-radius: 2rem;
+}
+
+.repara-mail {
+color: red;
+}
+
+.llamado-prov2{
+background-color: #0f0c04;
+border-radius: 2rem;
+}
+
+.llamado-prov2 img {
+  width: 7rem;
+  height:7rem;
+}

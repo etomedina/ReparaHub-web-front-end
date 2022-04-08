@@ -8,28 +8,29 @@ export const Proveedores = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="d-flex flex-column ">
-			<h3 className="display-9 text-center">Deseas formar parte de nuestros proveedores de servicios?</h3>
+		<div className="container gap-2 m-0 d-flex flex-column flex-nowrap align-items-center">
+		<div className="d-flex flex-column align-items-center">
+			<h5 className="text-center p-2"><strong>¿Desea formar parte de nuestros proveedores de servicio técnico automotriz?</strong></h5>
 
-			<hr className="my-4" />
-
-			<div className="d-flex flex-column mx-3 border rounded bg-primary bg-opacity-50 text-white">
-				<div className="d-flex  mx-2"><p className="">Contacte con uno de nuestros asesores, quienes le brindaran las herramientras para formar parte de ReparaHub</p></div>
-				<div className="d-flex mx-2 justify-content-end"><p className=" fst-italic">proveedores@repara.hub</p></div>
-				<div className="d-flex mx-2"><p className="fst-italic">0212- 910 60 41 y Whatssap 0422- 9106041</p></div>
+			<div className="d-flex flex-column mx-1 p-2 llamado-prov align-items-around">
+				<p className="p-2 fst-italic fw-bold">Contacte con uno de nuestros asesores, quienes le brindarán las herramientas para ofrecer sus servicios a nuestros clientes</p>
+				<p className=" fst-italic repara-mail fw-bolder fs-3  mx-2 align-self-end">proveedores@repara.hub</p>
+				<p className="fst-italic repara-mail fw-bolder fs-3  mx-2 align-self-end"> 0803- 737 27 24</p>
+				<p className="fst-italic repara-mail fw-bolder fs-3  mx-2 align-self-end"> WhatsApp: 0428 - 737 27 24</p>
 			</div>
-			<h3 className="display-9 text-center ">Beneficios:</h3>
-			<div className="container border-top border-1 border-bottom py-5 "  >
-				<div className="d-flex flex-row border rounded bg-primary bg-opacity-50 ">
-					<div className="col-md-8 mx-2">
-						<p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia architecto dolores reprehenderit temporibus corporis velit porro enim error voluptatum asperiores et eius, cum aperiam laborum fugiat, dignissimos sapiente.</p>
-					</div>
-					<div className="col-md-4 mx-2 my-2"> 
-						<img src= {TallerImg03} alt=""  className="rounded-circle img-fluid rounded-sm" />
-					</div>
+			<h3 className="text-center fw-bolder p-3">Beneficios:</h3>
+			
+			<div className="d-flex flex-row mx-1 mb-3 p-2 llamado-prov2 align-items-around">
+				<img src= {TallerImg03} alt="" className="rounded-circle img-fluid p-2 align-self-center" />
+				<div className="d-flex flex-column align-items-around">
+					<p className="text-white px-2 fst-italic fw-bold ">Mayor oportunidad de hacer negocios</p>
+					<p className="text-white px-2 fst-italic fw-bold ">Confianza en una plataforma segura</p>
+					<p className="text-white px-2 fst-italic fw-bold ">Mejor visibilidad</p>
 				</div>
+
 			</div>
 
+		</div>
 		</div>
 	);
 };

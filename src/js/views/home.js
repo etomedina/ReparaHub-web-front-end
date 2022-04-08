@@ -11,7 +11,7 @@ export const Home = () => {
 		<div className="jumbotron jumbotron-fluid d-flex flex-column flex-nowrap justify-content-around mt-2 p-2" style={{backgroundImage: `url(${taller_01})` }}>
 				<div className="d-flex flex-row flex-nowrap">
 					<div className="col-6"></div>
-					<h1 className="col-6 display-jt px-4 py-2 my-2 justify-content-end">Repara Hub es una nueva forma de solicitar servicio técnico automotriz</h1>
+					<h1 className="col-6 display-jt px-4 py-2 my-2 justify-content-end fst-italic">Repara Hub es una nueva forma de solicitar servicio técnico automotriz</h1>
 				</div>
 				<p className="display-jt px-4 py-1 m-0 d-flex justify-content-end">Le solucionamos la falla de tu vehículo en un par de clics</p>
 		</div>
